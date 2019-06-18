@@ -1,0 +1,24 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <button mat-button class="navbar-brand nav-home" routerLink="/home" routerLinkActive="active"
+        onclick="window.scroll({top: 0, left: 0, behavior: 'smooth'})">
+        Piotr Kieltyka website <i class="fas fa-fingerprint"></i>
+      </button>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <div class="nav navbar-nav navbar-right nav-buttons">
+        <button mat-stroked-button routerLink="/home" routerLinkActive="active"
+          onclick="window.scroll({top: 0, left: 0, behavior: 'smooth'})">Home</button>
+        <button mat-stroked-button routerLink="/about" routerLinkActive="active"
+          onclick="window.scroll({top: 0, left: 0, behavior: 'smooth'})">About</button>
+      </div>
+    </div>
+  </div>
+</nav>

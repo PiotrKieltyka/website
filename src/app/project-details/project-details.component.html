@@ -1,0 +1,57 @@
+<div *ngFor="let project of projects">
+
+  <!-- Left content -->
+  <div *ngIf="project.position == 'left'">
+    <div class="wow fadeIn">
+      <div class="content-wrap">
+        <div class="row">
+          <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+            <img class="img-responsive box-shadowed" src="{{ project.featured_image }}" title="{{ project.title }}">
+          </div>
+          <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="content">
+              <h3 class="title shadowed">{{ project.title }}</h3>
+              <p class="excerpt shadowed">{{ project.lead_text }}</p>
+              <a *ngIf="project.project_link" href="{{ project.project_link }}" class="project-link">
+                <button mat-button class="btn btn-default btn-lg box-shadowed"><i class="{{ project.button_icon }}"></i>{{ project.button_text }}</button>
+              </a>
+              <div class="tags shadowed">
+                <span *ngFor="let tag of project.tags">{{ tag }}</span>
+              </div>
+              <!-- <div class="categories"><span>{{ project.categories }}</span></div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Left content end -->
+
+  <!-- Right content -->
+  <div *ngIf="project.position == 'right'">
+    <div class="wow fadeIn">
+      <div class="content-wrap">
+        <div class="row">
+          <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="content">
+              <h3 class="title shadowed">{{ project.title }}</h3>
+              <p class="excerpt shadowed">{{ project.lead_text }}</p>
+              <a *ngIf="project.project_link" href="{{ project.project_link }}" class="project-link">
+                <button mat-button class="btn btn-default btn-lg box-shadowed"><i class="{{ project.button_icon }}"></i>{{ project.button_text }}</button>
+              </a>
+              <div class="tags shadowed">
+                <span *ngFor="let tag of project.tags">{{ tag }}</span>
+              </div>
+              <!-- <div class="categories"><span>{{ project.categories }}</span></div> -->
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+            <img class="img-responsive box-shadowed" src="{{ project.featured_image }}" title="{{ project.title }}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Right content end -->
+
+</div>

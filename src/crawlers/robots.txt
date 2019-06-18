@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: AdsBot-Google
+Disallow: /
+
+SITEMAP: https://piotrkieltyka.website/sitemap.xml

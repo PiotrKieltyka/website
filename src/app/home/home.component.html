@@ -1,0 +1,101 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="hero-container">
+        <div class="hero-content">
+          <!-- OWL -->
+          <div id="owl">
+            <div id="owl-character">
+              <div id="eyes" class="eyes"></div>
+              <div class="arm-down-left"></div>
+              <div class="arm-down-right"></div>
+            </div>
+          </div>
+          <!-- OWL end -->
+          <!-- Particles component -->
+          <site-particles></site-particles>
+          <!-- Particles component end -->
+          <!-- Text area -->
+          <h1 class="text-center shadowed">Hello. I'm Piotr Kieltyka.</h1>
+          <p class="text-center shadowed wow pulse" data-wow-duration="3s" data-wow-delay="2s" id="home_site_description">
+            I’m a dedicated developer with a passion for coding and problem solving.<br>
+            <a class="wow flash" style="cursor: pointer" data-toggle="modal" data-target="#contact" data-wow-duration="3s" data-wow-delay="5s">Why not get in touch?</a>
+          </p>
+          <!-- Text area end -->
+          <!-- Contact form -->
+            <div id="contact" class="modal fade" role="dialog">
+              <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="form-horizontal form-contact clearfix"
+                      action="https://formspree.io/p.kieltyka@gmail.com" method="POST">
+                      <div class="form-group">
+                        <label class="message-label">Hello Piotr,</label>
+                        <textarea class="message form-control" rows="8" name="body" placeholder="Type your message..."></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="name">Sincerely,</label>
+                        <input type="name" class="name form-control" placeholder="Your Name">
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" class="email form-control" name="_replyto" placeholder="Your Email">
+                      </div>
+                      <input type="submit" class="btn btn-default" style="float: right; font-weight: 400;" value="Send">
+                    </form>
+                  </div>
+                  <!-- Contact form end -->
+                </div>
+              </div>
+            </div>
+            <!--  Github button -->
+            <div id="github" class="hero-buttons wow fadeInUp" data-wow-duration="2s" data-wow-delay="1.5s">
+              <a href="https://github.com/PiotrKieltyka">
+                <button mat-button class="btn btn-default btn-lg box-shadowed">
+                  <i class="fab fa-github fa-lg"></i>
+                  Github
+                </button>
+              </a>
+            </div>
+            <!-- Github button end -->
+        </div>
+      </div>
+      <a class="section-jump text-center" onclick="window.scroll({top: 950, behavior: 'smooth'})">
+        <i class="fa fa-angle-down fa-3x"></i>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- Projects -->
+<main id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="section-title text-center"></h2>
+        <p class="section-subtitle text-center"></p>
+        <div class="break"></div>
+        <!-- Projects list -->
+          <site-project-details></site-project-details>
+        <!-- Projects list end -->
+      </div>
+    </div>
+  </div>
+</main>
+<!-- Projects end -->
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-2 col-md-offset-1">
+        <p class="text-muted text-left "><a href="https://piotrkieltyka.github.io/"></a></p>
+      </div>
+      <div class="col-xs-12 col-md-6 col-md-offset-2">
+        <a class="section-jump" onclick="window.scroll({top: 0, left: 0, behavior: 'smooth'})">
+          <i class="fa fa-angle-up fa-3x"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer end -->

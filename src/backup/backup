@@ -1,0 +1,226 @@
+<main id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="section-title text-center"></h2>
+        <p class="section-subtitle text-center"></p>
+        <div class="break"></div>
+        <div class="wow fadeIn">
+          <div class="content-wrap">
+            <div class="row">
+              <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                <div class="content">
+                  <h3 class="title shadowed">Angular Workshop with Nrwl NX & RxJS</h3>
+                  <p class="excerpt shadowed">Project created to develop my programming skills in Angular with NX and RxJS</p>
+                  <a href="https://github.com/PiotrKieltyka/angular-workshop" class="project-link"><button
+                      class="btn btn-default btn-lg"><i class="fab fa-angular fa-lg"></i>Visit Project</button></a>
+                  <div class="tags shadowed">
+                    <span>NX</span>
+                    <span>RxJS</span>
+                    <span>Angular</span>
+                    <span>Core</span>
+                    <span>Material</span>
+                    <span>TypeScript</span>
+                  </div>
+                  <!-- <div class="categories"><span>development</span></div> -->
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img class="img-responsive box-shadowed" src="../../assets/05-nrwl-nx-workshop.png"
+                  title="Angular Workshop with Nrwl NX & RxJS">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wow fadeIn">
+          <div class="content-wrap">
+            <div class="row">
+              <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img class="img-responsive box-shadowed" src="../../assets/01_userApp-nodeServer.png"
+                  title="userApp NodeJS server">
+              </div>
+              <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                <div class="content">
+                  <h3 class="title shadowed">userApp NodeJS server</h3>
+                  <p class="excerpt shadowed">API written in TypeScript using Node, Express and connected to MongoDB via Mongoose</p>
+                  <a href="https://github.com/PiotrKieltyka/userApp-nodeServer" class="project-link"><button
+                      class="btn btn-default btn-lg"><i class="fab fa-node-js fa-lg"></i>Visit Project</button></a>
+                  <div class="tags shadowed">
+                    <span>TypeScript</span>
+                    <span>Express</span>
+                    <span>NodeJS</span>
+                    <span>MongoDB</span>
+                    <span>API</span>
+                  </div>
+                  <!-- <div class="categories"><span>development</span></div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wow fadeIn">
+          <div class="content-wrap">
+            <div class="row">
+              <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                <div class="content">
+                  <h3 class="title shadowed">userApp</h3>
+                  <p class="excerpt shadowed">Project created to develop my programming skills</p>
+                  <a href="https://github.com/PiotrKieltyka/userApp" class="project-link"><button
+                      class="btn btn-default btn-lg"><i class=""></i>Visit Project</button></a>
+                  <div class="tags shadowed">
+                    <span>Angular</span>
+                    <span>Material</span>
+                    <span>TypeScript</span>
+                    <span>SASS</span>
+                  </div>
+                  <!-- <div class="categories"> <span>development</span></div> -->
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img class="img-responsive box-shadowed" src="../../assets/02-userApp-frontend.png" title="userApp">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wow fadeIn">
+          <div class="content-wrap">
+            <div class="row">
+              <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img class="img-responsive box-shadowed" src="../../assets/04-rwd-production-monitor.png"
+                  title="Monitoring App">
+              </div>
+              <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                <div class="content">
+                  <h3 class="title shadowed">Monitoring App</h3>
+                  <p class="excerpt shadowed">Project created for an android phones and tablets to monitoring production & packaging products</p>
+                  <div class="tags shadowed">
+                    <span>Angular</span>
+                    <span>Material</span>
+                    <span>TypeScript</span>
+                    <span>Android</span>
+                    <span>RWD</span>
+                    <span>JSON</span>
+                  </div>
+                  <!-- <div class="categories"> <span>development</span></div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wow fadeIn">
+          <div class="content-wrap">
+            <div class="row">
+              <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                <div class="content">
+                  <h3 class="title shadowed">Apartamenty na Polanie</h3>
+                  <p class="excerpt shadowed">Project created for my residents' association</p>
+                  <a href="https://anp1.pl" class="project-link"><button class="btn btn-default btn-lg">
+                      <i class="fas fa-users fa-lg"></i>Visit Project</button></a>
+                  <div class="tags shadowed">
+                    <span>HTML5</span>
+                    <span>SASS</span>
+                    <span>JavaScript</span>
+                  </div>
+                  <!-- <div class="categories"><span>development</span></div> -->
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img class="img-responsive box-shadowed" src="../../assets/03-anp1-website.png"
+                  title="Apartamenty na Polanie">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+
+              <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+              <blockquote>
+                <p>Angular Tricity #6 (February 19, 2019)</p>
+                <p><img
+                    src="https://eventil.s3.amazonaws.com/uploads/group/avatar/3672/medium_27972679_191309268288036_1032590328319884337_n.png"
+                    alt="" width="48px" height="48px" /></p>
+                <p>Dynamic components &amp; Lazy loading w Angular</p>
+                <p>Introduction to Apollo GraphQL with Angular</p>
+                <p>RxCoffeeShop</p>
+              </blockquote>
+            </div>
+            <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+              <blockquote>
+                <p>Angular Tricity #5 (November 6, 2018)</p>
+                <p><img
+                    src="https://eventil.s3.amazonaws.com/uploads/group/avatar/3672/medium_27972679_191309268288036_1032590328319884337_n.png"
+                    alt="" width="48px" height="48px" /></p>
+                <p>State management with NgRx</p>
+                <p>I like to move it! Animations in Angular</p>
+                <p>NGXS - yet another Angular state management library</p>
+              </blockquote>
+            </div>
+            <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+              <blockquote>
+                <p>Angular Tricity #4 (September 12, 2018)</p>
+                <p><img
+                    src="https://eventil.s3.amazonaws.com/uploads/group/avatar/3672/medium_27972679_191309268288036_1032590328319884337_n.png"
+                    alt="" width="48px" height="48px" /></p>
+                <p>Angular i18n - current state and the future</p>
+                <p>Domain Driven Design w Angular</p>
+                <p>NativeScript loves Angular</p>
+              </blockquote>
+            </div>
+            <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+              <blockquote>
+                <p>Angular Tricity #3 (June 27, 2018)</p>
+                <p><img
+                    src="https://eventil.s3.amazonaws.com/uploads/group/avatar/3672/medium_27972679_191309268288036_1032590328319884337_n.png"
+                    alt="" width="48px" height="48px" /></p>
+                <p>Angular Schematics</p>
+                <p>Angular, the bad parts</p>
+                <p>Angular performance</p>
+              </blockquote>
+            </div>
+            <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+              <blockquote>
+                <p>Rolling Scopes #48 (May 25, 2018)</p>
+                <p> <img src="https://rollingscopes.com/images/logo_rs_text.svg" alt="" width="48px" height="48px" />
+                </p>
+                <p>“Backend For Frontend“ with NestJS: usage patterns</p>
+              </blockquote>
+            </div>
+            <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+              <blockquote>
+                <p>Angular Tricity #2 (May 9, 2018)</p>
+                <p><img
+                    src="https://eventil.s3.amazonaws.com/uploads/group/avatar/3672/medium_27972679_191309268288036_1032590328319884337_n.png"
+                    alt="" width="48px" height="48px" /></p>
+                <p>TypeScript magic types, the advanced type system</p>
+                <p>Whats new in Angular 6</p>
+                <p>Angular Zones</p>
+              </blockquote>
+            </div>
+            <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+              <blockquote>
+                <p>Angular Tricity #1 (March 22, 2018)</p>
+                <p><img
+                    src="https://eventil.s3.amazonaws.com/uploads/group/avatar/3672/medium_27972679_191309268288036_1032590328319884337_n.png"
+                    alt="" width="48px" height="48px" /></p>
+                <p>Component testing</p>
+                <p>Directives</p>
+                <p>Streams</p>
+              </blockquote>
+            </div>
+            <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+              <blockquote>
+                <p> The Rolling Scopes #34 (April 26, 2017)</p>
+                <p> <img src="https://rollingscopes.com/images/logo_rs_text.svg" alt="" width="48px" height="48px" />
+                </p>
+                <p>Accessibility Driven Development: why would you even care?</p>
+                <p>Start Using Custom Elements</p>
+                <p>Lodash QuickDraw!</p>
+                <p>Easy Mobile Apps with Ionic 2 Framework</p>
+              </blockquote>
+            </div>
