@@ -1,8 +1,8 @@
 <div *ngFor="let meetup of meetups">
   <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
       <blockquote>
-        <p>{{ meetup.title }} ({{ meetup.date}})</p>
-        <p><img src="{{ meetup.featured_image }}" alt="meetup.title" width="48px" height="48px" /></p>
+        <p>{{ meetup.title }} ({{ meetup.date }})</p>
+        <p><img src="{{ meetup.featured_image }}" alt="{{ meetup.title }}" width="48px" height="48px" /></p>
         <p *ngFor="let topic of meetup.topics">{{ topic }}</p>
       </blockquote>
     </div>
