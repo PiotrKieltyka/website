@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { MeetupDetailsComponent } from './meetup-details/meetup-details.component';
 import { ParticlesComponent } from './particles/particles.component';
+import { PersonalStudiesComponent } from './personal-studies/personal-studies.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ParticlesComponent } from './particles/particles.component';
     ProjectDetailsComponent,
     MeetupDetailsComponent,
     ParticlesComponent,
+    PersonalStudiesComponent,
   ],
   imports: [
     BrowserModule,

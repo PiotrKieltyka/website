@@ -1,7 +1,6 @@
 import { Meetup } from './meetup.model';
 
 export const MeetupsDB: Meetup[] = [
-
     {
         title: 'Angular Tricity #6',
         date: 'February 19, 2019',
@@ -81,4 +80,4 @@ export const MeetupsDB: Meetup[] = [
             'Easy Mobile Apps with Ionic 2 Framework',
         ]
     }
-]
+];

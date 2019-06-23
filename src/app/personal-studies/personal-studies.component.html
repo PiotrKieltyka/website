@@ -1,0 +1,9 @@
+<div *ngFor="let study of studies">
+  <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+      <blockquote>
+        <p>{{ study.title }} </p>
+        <p>{{ study.author }}</p>
+        <p *ngFor="let topic of study.topics">{{ topic }}</p>
+      </blockquote>
+    </div>
+  </div>

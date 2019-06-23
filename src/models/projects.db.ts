@@ -28,7 +28,7 @@ export const ProjectsDB: Project[] = [
     },
     {
         position: 'left',
-        title: 'userApp',
+        title: 'userApp Frontend',
         lead_text: 'Project created to develop my programming skills',
         date: '2018-11-28',
         tags: ['Angular', 'Material', 'TypeScript', 'SASS'],
@@ -40,10 +40,10 @@ export const ProjectsDB: Project[] = [
     },
     {
         position: 'right',
-        title: 'userApp NodeJS server',
+        title: 'userApp NodeJS Server',
         lead_text: 'API written in TypeScript using Node, Express and connected to MongoDB via Mongoose',
         date: '2018-11-29',
-        tags: ['TypeScript', 'Express', 'NodeJS', 'MongoDB', 'API'],
+        tags: ['TypeScript', 'Express', 'NodeJS', 'MongoDB', 'RestAPI'],
         featured_image: '../assets/01_userApp-nodeServer.png',
         project_link: 'https://github.com/PiotrKieltyka/userApp',
         button_icon: 'fab fa-node-js fa-lg',
@@ -64,17 +64,28 @@ export const ProjectsDB: Project[] = [
     },
     {
         position: 'right',
+        title: 'SEDATE - Diploma Project',
+        lead_text: 'Web App with RWD for Residential Association Management',
+        date: '2018-09-01',
+        tags: ['Angular', 'RWD', 'RestAPI', 'Java', 'PostgreSQL'],
+        featured_image: '../assets/06-sedate-frontend.png',
+        project_link: '',
+        button_icon: 'fab fa-angular fa-lg',
+        button_text: '',
+        categories: 'development',
+    },
+    {
+        position: 'left',
         title: 'Apartamenty na Polanie',
         lead_text: 'Project created for my residents\' association',
         date: '2015-05-08',
-        tags: ['HTML', 'SASS', 'JavaScript'],
+        tags: ['HTML', 'CSS', 'JavaScript'],
         featured_image: '../assets/03-anp1-website.png',
         project_link: 'https://anp1.pl',
         button_icon: 'fas fa-users fa-lg',
         button_text: 'Visit project',
         categories: '',
     },
-
 ];
 
 // {
