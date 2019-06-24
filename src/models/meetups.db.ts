@@ -2,6 +2,15 @@ import { Meetup } from './meetup.model';
 
 export const MeetupsDB: Meetup[] = [
     {
+        title: 'Angular Tricity #7',
+        date: 'April 8, 2019',
+        featured_image: '../assets/angular_tricity.png',
+        topics: [
+            'Enterprise Angular apps with Nx and monorepo approach',
+            'RxJS Tips & Tricks',
+        ],
+    },
+    {
         title: 'Angular Tricity #6',
         date: 'February 19, 2019',
         featured_image: '../assets/angular_tricity.png',

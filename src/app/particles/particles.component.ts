@@ -28,7 +28,7 @@ export class ParticlesComponent implements AfterViewInit, OnDestroy {
   context: CanvasRenderingContext2D;
   particlesList: SingleParticle[] = [];
 
-  @ViewChild('particles') particlesCanvas: ElementRef;
+  @ViewChild('particles', { static: true }) particlesCanvas: ElementRef;
 
   constructor() { }
 
