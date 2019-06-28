@@ -3,4 +3,5 @@ export interface Meetup {
     date: string;
     featured_image: string;
     topics: string[];
+    link: string;
 }

@@ -1,3 +1,4 @@
+import { MeetupDetailsCardComponent } from './meetup-details-card/meetup-details-card.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
