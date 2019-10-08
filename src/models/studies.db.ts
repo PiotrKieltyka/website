@@ -2,6 +2,11 @@ import { Study } from './study.model';
 
 export const StudiesDB: Study[] = [
   {
+    title: 'Docker for NodeJS Projects',
+    author: 'Docker Captain',
+    button_icon: 'fab fa-docker',
+  },
+  {
     title: 'Angular Reactive NgRX with Nrwl NX',
     author: 'Lukas Ruebbelke / Frontend Masters',
     button_icon: 'fab fa-angular',

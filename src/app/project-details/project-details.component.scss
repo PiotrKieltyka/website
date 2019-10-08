@@ -2,6 +2,30 @@
   text-shadow: 0px 20px 25px rgba(100, 100, 100, 1);
 }
 
+.btn:hover {
+  color: rgb(59, 91, 151);
+}
+
+.tags span:nth-child(n):hover {
+  color: rgb(59, 91, 151);
+}
+
+.tags span:nth-child(n):after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  background: rgb(59, 91, 151);
+  transition: width .3s ease 0s, left .3s ease 0s;
+  width: 0;
+}
+
+.tags span:nth-child(n):hover:after {
+  width: 100%;
+  left: 0;
+}
+
 .box-shadowed {
   font-weight: 300;
   border-radius: 6px;
