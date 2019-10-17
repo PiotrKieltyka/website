@@ -1,6 +1,7 @@
 import {
   Component,
-  AfterContentInit
+  AfterContentInit,
+  OnInit
 } from '@angular/core';
 
 @Component({
@@ -8,7 +9,13 @@ import {
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements AfterContentInit {
+export class HomeComponent implements OnInit, AfterContentInit {
+
+  time: Date;
+
+  ngOnInit(): void {
+    this.utcTime();
+  }
 
   ngAfterContentInit(): void {
     const owlEyes = document.getElementById('eyes');
@@ -18,7 +25,12 @@ export class HomeComponent implements AfterContentInit {
         owlEyes.classList.remove('eyes-blink');
       }, 100);
     }, 4500);
+  }
 
+  utcTime(): void {
+    setInterval( () => {
+      this.time = new Date();
+    }, 1000);
   }
 
 }

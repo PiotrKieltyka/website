@@ -2,8 +2,21 @@
   text-shadow: 0px 20px 25px rgba(100, 100, 100, 1);
 }
 
+.box-shadowed {
+  font-weight: 300;
+  border-radius: 6px;
+  box-shadow: 0px 20px 25px 0px rgba(100, 100, 100, .5);
+}
+
 .btn:hover {
   color: rgb(59, 91, 151);
+  animation-play-state: paused;
+}
+
+.breath {
+  animation-delay: 1s;
+  animation: box-breath 3s infinite alternate ease-in-out;
+  will-change: box-shadow;
 }
 
 .tags span:nth-child(n):hover {
@@ -26,8 +39,7 @@
   left: 0;
 }
 
-.box-shadowed {
-  font-weight: 300;
-  border-radius: 6px;
-  box-shadow: 0px 20px 25px 0px rgba(100, 100, 100, .5);
+@keyframes box-breath {
+  from { box-shadow: 0px 20px 25px 0px rgba(100, 100, 100, .5); }
+  to { box-shadow: 0px 0px 0px 0px white; }
 }
