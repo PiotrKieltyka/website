@@ -2,20 +2,38 @@
   font-weight: 400;
 }
 
+#navbrand {
+  margin-left: 10px;
+}
+
 #navbar {
   text-align: right;
+  @media (min-width: 768px) {
+    box-shadow: 0px 20px 25px 0px rgba(100, 100, 100, .3);
+  }
+}
+
+#toggleButton {
+  margin-right: 22px;
 }
 
 .container-fluid {
-  box-shadow: 0px 20px 25px 0px rgba(100, 100, 100, .3);
+  margin-right: -15px;
+  margin-left: -15px;
+  @media (max-width: 768px) {
+    box-shadow: 0px 20px 25px 0px rgba(100, 100, 100, .3);
+  }
 }
 
 .nav-buttons {
   margin-top: .7rem;
   margin-right: .7rem;
   color: rgba(119, 119, 119, .7);
-}
-
-.nav-buttons button:hover {
-  color: rgba(119, 119, 119, 1);
+  button {
+    border: 0;
+    border-radius: 0;
+  }
+  button:hover {
+    color: rgba(59, 91, 151, 1);
+  }
 }

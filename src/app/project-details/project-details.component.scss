@@ -9,7 +9,7 @@
 }
 
 .btn:hover {
-  color: rgb(59, 91, 151);
+  color: rgb(7, 15, 87);
   animation-play-state: paused;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .tags span:nth-child(n):hover {
-  color: rgb(59, 91, 151);
+  color: rgb(7, 15, 87);
 }
 
 .tags span:nth-child(n):after {
@@ -29,7 +29,7 @@
   display: block;
   height: 1px;
   left: 50%;
-  background: rgb(59, 91, 151);
+  background: rgb(7, 15, 87);
   transition: width .3s ease 0s, left .3s ease 0s;
   width: 0;
 }

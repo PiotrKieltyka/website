@@ -40,7 +40,7 @@ export const ProjectsDB: Project[] = [
     },
     {
         position: 'right',
-        title: 'userApp NodeJS Server',
+        title: 'userApp Node Server',
         lead_text: 'API written in TypeScript using Node, Express and connected to MongoDB via Mongoose',
         date: '2018-11-29',
         tags: ['TypeScript', 'Express', 'NodeJS', 'MongoDB', 'Rest API'],
@@ -53,7 +53,7 @@ export const ProjectsDB: Project[] = [
     {
         position: 'left',
         title: 'Monitoring App',
-        lead_text: 'Project created for an android phones and tablets to monitoring production & packaging products',
+        lead_text: 'Project created for an android phones and tablets to monitoring production and packaging products',
         date: '2019-01-29',
         tags: ['Angular', 'Material', 'RWD', 'TypeScript', 'Android', 'JSON'],
         featured_image: '../assets/04-rwd-production-monitor.png',
