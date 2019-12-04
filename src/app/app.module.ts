@@ -13,6 +13,7 @@ import { MeetupDetailsComponent } from './meetup-details/meetup-details.componen
 import { ParticlesComponent } from './particles/particles.component';
 import { PersonalStudiesComponent } from './personal-studies/personal-studies.component';
 import { MeetupDetailsCardComponent } from './meetup-details-card/meetup-details-card.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +26,12 @@ import { MeetupDetailsCardComponent } from './meetup-details-card/meetup-details
     ParticlesComponent,
     PersonalStudiesComponent,
     MeetupDetailsCardComponent,
+    ForbiddenComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MatButtonModule,
   ],
   exports: [
     MatButtonModule,
