@@ -27,6 +27,11 @@
   border: 2px solid rgba(255, 255, 255, .9);
   background-color: rgba(241, 242, 246, .5);
   text-align: center;
+  &:hover {
+    svg:nth-child(n+2) {
+      color: rgb(0, 114, 0);
+    }
+  }
   &:hover .overlay {
     bottom: -22%;
     color: rgb(238, 238, 238);

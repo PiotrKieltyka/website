@@ -1,9 +1,9 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,11 +17,9 @@ import { PersonalStudiesComponent } from './personal-studies/personal-studies.co
 import { MeetupDetailsCardComponent } from './meetup-details-card/meetup-details-card.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { LoginComponent } from './login/login.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import { AuthService } from './services/auth.service';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -45,11 +43,10 @@ import { AuthService } from './services/auth.service';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
+    MaterialModule,
   ],
   exports: [
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
+    MaterialModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
