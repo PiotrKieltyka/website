@@ -19,7 +19,8 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { LoginComponent } from './login/login.component';
 import { environment } from 'src/environments/environment';
 import { AuthService } from './services/auth.service';
-import { MaterialModule } from './material.module';
+import { MaterialModule } from './modules/material.module';
+import { UserinfoComponent } from './userinfo/userinfo.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { MaterialModule } from './material.module';
     MeetupDetailsCardComponent,
     ForbiddenComponent,
     LoginComponent,
+    UserinfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,9 @@ import { MaterialModule } from './material.module';
   exports: [
     MaterialModule,
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+  ],
   bootstrap: [AppComponent]
 })
 

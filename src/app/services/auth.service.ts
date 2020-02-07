@@ -2,20 +2,14 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 
-interface User {
-  uid: string;
-  email: string;
-  displayName: string;
-  photoURL: string;
-  emailVerified: boolean;
-}
-
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
+  isLoggedIn = false;
   userData: any;
+  redirectUrl: string;
 
   constructor(
     private angularFireAuth: AngularFireAuth,
@@ -24,7 +18,7 @@ export class AuthService {
     this.angularFireAuth.authState.subscribe(user => {
       if (user) {
         this.userData = user;
-        sessionStorage.setItem('user', JSON.stringify(this.userData));
+        sessionStorage.setItem('user', JSON.stringify(user.uid));
         JSON.parse(sessionStorage.getItem('user'));
       } else {
         sessionStorage.setItem('user', null);
@@ -33,23 +27,12 @@ export class AuthService {
     });
   }
 
-  get isLoggedIn(): boolean {
-    const user = JSON.parse(sessionStorage.getItem('user'));
-    return (user !== null) ? true : false;
-  }
-
-  signin(email, password): void {
+  signin(email: string, password: string): void {
     this.angularFireAuth.auth.signInWithEmailAndPassword(email, password)
-      .then((result) => {
-        const userData: User = {
-          uid: result.user.uid,
-          email: result.user.email,
-          displayName: result.user.displayName,
-          photoURL: result.user.photoURL,
-          emailVerified: result.user.emailVerified,
-        };
-        this.router.navigateByUrl('home');
-      }).catch((error) => {
+      .then(result => {
+        this.isLoggedIn = true;
+        this.router.navigateByUrl('userinfo');
+      }).catch(error => {
         console.warn(error.message);
       });
   }
@@ -57,6 +40,7 @@ export class AuthService {
   signout(): void {
     this.angularFireAuth.auth.signOut()
       .then(() => {
+        this.isLoggedIn = false;
         sessionStorage.removeItem('user');
         this.router.navigateByUrl('home');
       });
