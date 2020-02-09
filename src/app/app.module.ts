@@ -20,7 +20,7 @@ import { LoginComponent } from './login/login.component';
 import { environment } from 'src/environments/environment';
 import { AuthService } from './services/auth.service';
 import { MaterialModule } from './modules/material.module';
-import { UserinfoComponent } from './userinfo/userinfo.component';
+import { UserinfoComponent, ProfileDialog } from './userinfo/userinfo.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +36,10 @@ import { UserinfoComponent } from './userinfo/userinfo.component';
     ForbiddenComponent,
     LoginComponent,
     UserinfoComponent,
+    ProfileDialog,
+  ],
+  entryComponents: [
+    ProfileDialog,
   ],
   imports: [
     BrowserModule,

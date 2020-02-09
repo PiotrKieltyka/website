@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
+import { User } from 'firebase';
 
 @Injectable({
   providedIn: 'root'
@@ -27,14 +28,19 @@ export class AuthService {
     });
   }
 
+  updateProfile(user: User): void {
+    this.angularFireAuth.auth.currentUser.updateProfile({
+      displayName: user.displayName,
+      photoURL: user.photoURL,
+    }).then(result => result).catch(error => error.message);
+  }
+
   signin(email: string, password: string): void {
     this.angularFireAuth.auth.signInWithEmailAndPassword(email, password)
       .then(result => {
         this.isLoggedIn = true;
         this.router.navigateByUrl('userinfo');
-      }).catch(error => {
-        console.warn(error.message);
-      });
+      }).catch(error => error.message);
   }
 
   signout(): void {

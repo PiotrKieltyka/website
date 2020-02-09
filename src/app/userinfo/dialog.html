@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Profile editor</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Display name</mat-label>
+    <input matInput [(ngModel)]="data.displayName">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="data.email">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Email verification</mat-label>
+    <input matInput [(ngModel)]="data.emailVerified">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Phone number</mat-label>
+    <input matInput [(ngModel)]="data.phoneNumber">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Photo URL</mat-label>
+    <input matInput [(ngModel)]="data.photoURL">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button (click)="onNoClick()">dismiss</button>
+  <button [mat-dialog-close]="data" cdkFocusInitial>save</button>
+</div>
