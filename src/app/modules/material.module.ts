@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatCheckboxModule, MatNativeDateModule, MatRippleModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';

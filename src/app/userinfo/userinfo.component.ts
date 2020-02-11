@@ -47,7 +47,7 @@ export class UserinfoComponent implements OnInit {
         email: this.user.email,
         emailVerified: this.user.emailVerified,
         phoneNumber: this.user.phoneNumber,
-        photoUrl: this.user.photoURL,
+        photoURL: this.user.photoURL,
       }
     });
     dialogRef.afterClosed().subscribe(result => {
