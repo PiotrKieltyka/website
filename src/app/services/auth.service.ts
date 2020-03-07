@@ -9,7 +9,7 @@ import { User } from 'firebase';
 export class AuthService {
 
   isLoggedIn = false;
-  userData: any;
+  userData: User;
   redirectUrl: string;
 
   constructor(
@@ -39,6 +39,7 @@ export class AuthService {
     this.angularFireAuth.auth.signInWithEmailAndPassword(email, password)
       .then(result => {
         this.isLoggedIn = true;
+        this.userData = result.user;
         this.router.navigateByUrl('userinfo');
       }).catch(error => error.message);
   }

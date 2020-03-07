@@ -10,7 +10,10 @@
   </mat-form-field>
   <mat-form-field>
     <mat-label>Email verification</mat-label>
-    <input matInput [(ngModel)]="data.emailVerified">
+    <mat-select [(ngModel)]="data.emailVerified">
+      <mat-option value="true">true</mat-option>
+      <mat-option value="false">false</mat-option>
+    </mat-select>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Phone number</mat-label>

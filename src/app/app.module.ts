@@ -1,9 +1,11 @@
+import { NgModule } from '@angular/core';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+import { MaterialModule } from './modules/material.module';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,8 +21,10 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { LoginComponent } from './login/login.component';
 import { environment } from 'src/environments/environment';
 import { AuthService } from './services/auth.service';
-import { MaterialModule } from './modules/material.module';
 import { UserinfoComponent, ProfileDialog } from './userinfo/userinfo.component';
+import { LoaderComponent } from './loader/loader.component';
+import { LoaderService } from './services/loader.service';
+import { LoaderInterceptor } from './interceptors/loader.interceptor';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,7 @@ import { UserinfoComponent, ProfileDialog } from './userinfo/userinfo.component'
     LoginComponent,
     UserinfoComponent,
     ProfileDialog,
+    LoaderComponent,
   ],
   entryComponents: [
     ProfileDialog,
@@ -50,11 +55,14 @@ import { UserinfoComponent, ProfileDialog } from './userinfo/userinfo.component'
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     MaterialModule,
+    HttpClientModule
   ],
   exports: [
     MaterialModule,
   ],
   providers: [
+    LoaderService,
+    { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
     AuthService,
   ],
   bootstrap: [AppComponent]
