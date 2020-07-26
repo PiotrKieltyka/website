@@ -8,6 +8,12 @@ export const BlogpostsDB: BlogPost[] = [
     content: 'R U bored during the lockdown? Test out Ur boredom by trying to complete as many questions in this JavaScript questions series.'
   },
   {
+    title: 'Github Profile Secret',
+    date: 'July 26, 2020',
+    link: 'https://kevsoft.net/2020/07/04/github-special-repository-the-public-profile-readme.html',
+    content: 'A new feature arrived on GitHub recently. You can finally add a README to your GitHub profile.',
+  },
+  {
     title: 'Version 10 of Angular Now Available',
     date: 'June 25, 2020',
     link: 'https://blog.angular.io/version-10-of-angular-now-available-78960babd41',

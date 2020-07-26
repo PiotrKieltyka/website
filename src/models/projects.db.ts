@@ -16,9 +16,9 @@ export const ProjectsDB: Project[] = [
     // },
     {
         position: 'left',
-        title: 'Social media dashboard',
+        title: 'Social Media Dashboard',
         lead_text: 'Social media dashboard with theme switcher / Frontend Mentor',
-        date: '2019-05-10',
+        date: '2020-05-10',
         tags: ['HTML', 'CSS', 'RWD'],
         featured_image: '../assets/social-desktop-preview.jpg',
         project_link: 'https://piotrkieltyka.github.io/frontendmentor-social-media-dashboard',
@@ -50,13 +50,24 @@ export const ProjectsDB: Project[] = [
         button_text: 'Visit project',
         categories: 'development',
     },
-
     {
         position: 'right',
+        title: 'Phonebook App',
+        lead_text: 'Ensono - Angular Coding Challenge',
+        date: '2019-06-30',
+        tags: ['Angular', 'Material', 'TypeScript'],
+        featured_image: '../assets/07-ensono-challenge.jpg',
+        project_link: 'https://github.com/PiotrKieltyka/phonebook',
+        button_icon: 'fab fa-angular fa-lg',
+        button_text: 'Visit project',
+        categories: 'development',
+    },
+    {
+        position: 'left',
         title: 'Angular Workshop',
         lead_text: 'Angular Core and Reactive Angular with NgRx / Frontend Masters',
         date: '2019-02-03',
-        tags: ['Angular', 'Material', 'TypeScript', 'NX', 'RxJS',],
+        tags: ['Angular', 'Material', 'TypeScript', 'NX', 'RxJS'],
         featured_image: '../assets/05-nrwl-nx-workshop.png',
         project_link: 'https://github.com/PiotrKieltyka/angular-workshop',
         button_icon: 'fab fa-angular fa-lg',
@@ -64,7 +75,7 @@ export const ProjectsDB: Project[] = [
         categories: 'development',
     },
     {
-        position: 'left',
+        position: 'right',
         title: 'userApp Frontend',
         lead_text: 'Project created to develop my programming skills',
         date: '2018-11-28',
@@ -76,7 +87,7 @@ export const ProjectsDB: Project[] = [
         categories: 'development',
     },
     {
-        position: 'right',
+        position: 'left',
         title: 'userApp Node Server',
         lead_text: 'API written in TypeScript using Node, Express and connected to MongoDB via Mongoose',
         date: '2018-11-29',
@@ -88,7 +99,7 @@ export const ProjectsDB: Project[] = [
         categories: 'development',
     },
     {
-        position: 'left',
+        position: 'right',
         title: 'Monitoring App',
         lead_text: 'Project created for an android phones and tablets to monitoring production and packaging products',
         date: '2019-01-29',
@@ -100,7 +111,7 @@ export const ProjectsDB: Project[] = [
         categories: 'development',
     },
     {
-        position: 'right',
+        position: 'left',
         title: 'SEDATE - Diploma Project',
         lead_text: 'Web App with RWD for Residential Association Management',
         date: '2018-09-01',
@@ -112,7 +123,7 @@ export const ProjectsDB: Project[] = [
         categories: 'development',
     },
     {
-        position: 'left',
+        position: 'right',
         title: 'Apartamenty na Polanie',
         lead_text: 'Project created for my residents\' association',
         date: '2015-05-08',
