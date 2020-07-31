@@ -28,15 +28,15 @@ export class AuthService {
     });
   }
 
-  updateProfile(user: User): void {
-    this.angularFireAuth.auth.currentUser.updateProfile({
+  async updateProfile(user: User): Promise<void> {
+    (await this.angularFireAuth.currentUser).updateProfile({
       displayName: user.displayName,
       photoURL: user.photoURL,
     }).then(result => result).catch(error => error.message);
   }
 
   signin(email: string, password: string): void {
-    this.angularFireAuth.auth.signInWithEmailAndPassword(email, password)
+    this.angularFireAuth.signInWithEmailAndPassword(email, password)
       .then(result => {
         this.isLoggedIn = true;
         this.userData = result.user;
@@ -45,7 +45,7 @@ export class AuthService {
   }
 
   signout(): void {
-    this.angularFireAuth.auth.signOut()
+    this.angularFireAuth.signOut()
       .then(() => {
         this.isLoggedIn = false;
         sessionStorage.removeItem('user');

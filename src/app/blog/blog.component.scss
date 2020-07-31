@@ -4,13 +4,19 @@
   border-radius: 20px;
   // box-shadow: 0px 30px 65px 10px rgba(21, 9, 6, .6);
   padding: 1rem;
+  @media (max-width: 525px) {
+    .row {
+      margin-top: 1rem;
+    }
+  }
 }
 #blog-logo {
   height: 475px;
-  background-image: url('../../assets/cesis-studio-illustration-tranmautritam.png');
+  background-image: url('../../assets/cesis-studio-illustration-tranmautritam.png'); // Image by https://dribbble.com/tranmautritam - Email: hello@tranmautritam.com
   background-size: 60%;
   background-repeat: no-repeat;
   background-position-x: center;
+  filter: drop-shadow(0 0 40px rgb(148, 148, 148));
   @media (max-width: 1199px) {
     height: 360px;
   }
@@ -19,6 +25,9 @@
   }
   @media (max-width: 650px) {
     height: 240px;
+  }
+  @media (max-width: 525px) {
+    height: 200px;
   }
 }
 .row {

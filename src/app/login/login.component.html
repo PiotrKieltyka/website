@@ -22,5 +22,5 @@
       </mat-form-field>
     </div>
   </form>
-  <button [disabled]="loginForm.invalid" (click)="authService.signin(loginForm.controls['email'].value, loginForm.controls['password'].value)">check in</button>
+  <button *ngIf="!loginForm.invalid" (click)="authService.signin(loginForm.controls['email'].value, loginForm.controls['password'].value)">check in</button>
 </div>
