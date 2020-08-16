@@ -2,10 +2,28 @@ import { BlogPost } from './blogpost.model';
 
 export const BlogpostsDB: BlogPost[] = [
   {
+    title: 'Coding Games',
+    date: 'August 13, 2020',
+    link: 'https://x-team.com/blog/coding-games',
+    content: 'Coding games are an oft-overlooked way of learning a new programming language or improving your knowledge of an existing one.'
+  },
+  {
+    title: 'Removing sensitive data from GitHub history',
+    date: 'August 11, 2020',
+    link: 'https://dev.to/edmondso006/removing-sensitive-data-from-git-history-5g63',
+    content: 'I would like to think that we have all be there: accidentally pushing a secret (access token, password, connection string, etc) to your remote git server and immediately proceed to start to freak out. Or maybe its just me.'
+  },
+  {
+    title: 'Microsoft FAST Design',
+    date: 'August 9, 2020',
+    link: 'https://www.fast.design',
+    content: 'FAST is a collection of JavaScript packages centered around web standards, designed to help U efficiently tackle some of the most common challenges in website and application design and development.'
+  },
+  {
     title: 'A GitHub public roadmap',
     date: 'August 7, 2020',
     link: 'https://github.blog/2020-07-28-announcing-the-github-public-roadmap',
-    content: 'The public roadmap is designed to give your team more information about what features and functionality you can expect from GitHub over the coming quarters.'
+    content: 'The public roadmap is designed to give your team more information about what features and functionality U can expect from GitHub over the coming quarters.'
   },
   {
     title: 'A Roadmap for Angular',

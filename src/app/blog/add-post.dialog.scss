@@ -1,0 +1,33 @@
+.add-post-data {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-post-buttons {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+button {
+  font-size: 1.3rem;
+  width: 7rem;
+  border-width: 1px;
+  border-radius: 4px;
+  padding: 0 10px;
+  line-height: 34px;
+  background: transparent;
+  transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
+  &:hover {
+    background-color: rgba(119, 119, 119, .1);
+    opacity: .8;
+    cursor: pointer;
+  }
+  &:nth-child(1) {
+    color: rgb(114, 0, 0);
+  }
+  &:nth-child(2) {
+    color: rgb(0, 114, 0);
+  }
+}

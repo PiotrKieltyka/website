@@ -45,8 +45,8 @@ export class UserinfoComponent implements OnInit {
 
 @Component({
   selector: 'site-dialog',
-  templateUrl: './dialog.html',
-  styleUrls: ['./dialog.scss']
+  templateUrl: './profile-edit.dialog.html',
+  styleUrls: ['./profile-edit.dialog.scss']
 })
 export class ProfileDialog {
   constructor(

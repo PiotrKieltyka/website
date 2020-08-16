@@ -1,6 +1,7 @@
 <div class="container">
   <div id="blog-logo" class="wow fadeIn"></div>
   <!-- Blog Logo by https://dribbble.com/tranmautritam - Email: hello@tranmautritam.com -->
+  <button *ngIf="authService.isLoggedIn" mat-stroked-button class="mat-stroked-button mat-button-base" (click)="openAddPostDialog()">add post</button>
   <div class="row" *ngFor="let blogpost of blogposts">
     <div class="col-md-10 col-md-offset-1">
       <div class="col-md-4 blog-column-1">

@@ -25,7 +25,7 @@ import { UserinfoComponent, ProfileDialog } from './userinfo/userinfo.component'
 import { LoaderComponent } from './loader/loader.component';
 import { LoaderService } from './services/loader.service';
 import { LoaderInterceptor } from './interceptors/loader.interceptor';
-import { BlogComponent } from './blog/blog.component';
+import {AddPostDialog, BlogComponent} from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -44,9 +44,11 @@ import { BlogComponent } from './blog/blog.component';
     ProfileDialog,
     LoaderComponent,
     BlogComponent,
+    AddPostDialog,
   ],
   entryComponents: [
     ProfileDialog,
+    AddPostDialog,
   ],
   imports: [
     BrowserModule,
