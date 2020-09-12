@@ -1,9 +1,8 @@
-
 ## Piotr Kieltyka Website Project
 
 Developers don't talk much. Their code does all the talking.
 
-https://piotrkieltyka.website/
+<https://piotrkieltyka.website>
 
 Try to find some easter eggs..
 

@@ -2,13 +2,13 @@
 <div mat-dialog-content class="add-post-data">
   <mat-form-field>
     <mat-label>Title</mat-label>
-    <input matInput [(ngModel)]="data.title">
+    <input matInput [(ngModel)]="data.title" cdkFocusInitial>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Date</mat-label>
-    <input matInput [matDatepicker]="dp" [(ngModel)]="data.date">
+    <input matInput [matDatepicker]="dp" disabled [(ngModel)]="data.date">
     <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
-    <mat-datepicker #dp></mat-datepicker>
+    <mat-datepicker #dp disabled="false"></mat-datepicker>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Link</mat-label>
@@ -21,5 +21,5 @@
 </div>
 <div mat-dialog-actions class="add-post-buttons">
   <button (click)="onNoClick()">dismiss</button>
-  <button [mat-dialog-close]="data" cdkFocusInitial>save</button>
+  <button [mat-dialog-close]="data">save</button>
 </div>

@@ -1,12 +1,12 @@
 @mixin fontLight {
-    @for $i from 3 through 7 {
-        &:nth-child(#{$i}) {
-            font-weight: 100;
-        }
+  @for $i from 3 through 7 {
+    &:nth-child(#{$i}) {
+      font-weight: 100;
     }
+  }
 }
 
 blockquote p {
-    font-weight: 400;
-    @include fontLight();
+  font-weight: 400;
+  @include fontLight();
 }

@@ -6,19 +6,19 @@
   margin-left: 1rem;
   border: none;
   background-color: transparent;
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     margin-top: .75rem;
   }
 }
 
 #navbar {
-  text-align: right;
+  text-align: center;
   background-color: #e9edf0;
   border: none;
 }
 
 #toggleButton {
-  margin-right: 22px;
+  margin-right: 3rem;
 }
 
 .container-fluid {
@@ -42,4 +42,8 @@
   button:hover {
     color: rgba(59, 91, 151, 1);
   }
+}
+
+.active {
+  color: rgba(59, 91, 151, .7);
 }

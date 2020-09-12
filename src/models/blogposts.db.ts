@@ -2,6 +2,54 @@ import { BlogPost } from './blogpost.model';
 
 export const BlogpostsDB: BlogPost[] = [
   {
+    title: 'Type <\Challenge[]>',
+    date: 'September 8, 2020',
+    link: 'https://github.com/type-challenges/type-challenges',
+    content: 'Collection of TypeScript type challenges. This project is aim to help you better understand how the type system works, writing your own utilities, or just having fun with the challenges.'
+  },
+  {
+    title: 'Will it CORS?',
+    date: 'September 4, 2020',
+    link: 'https://httptoolkit.tech/will-it-cors/',
+    content: 'Do U fully understand how CORS works? This web page will help U.'
+  },
+  {
+    title: 'ESLint soon in Angular.',
+    date: 'September 3, 2020',
+    link: 'https://github.com/angular/angular-cli/pull/18677',
+    content: 'With this change they add a new builder for ESLint. Check link below!'
+  },
+  {
+    title: 'v7.8.0, a minor release upgrade of ESLint.',
+    date: 'August 31, 2020',
+    link: 'https://eslint.org/blog/2020/08/eslint-v7.8.0-released',
+    content: 'This release adds some new features like support for logical assignment operators and numeric separators for example.'
+  },
+  {
+    title: 'GitHub is renaming the default branch from master to main.',
+    date: 'August 27, 2020',
+    link: 'https://github.blog/changelog/2020-08-26-set-the-default-branch-for-newly-created-repositories',
+    content: 'You can now set the default branch name for newly-created repositories under your username. On October 1, 2020, if you haven\'t changed the default branch for new repositories it will automatically change from master to main.'
+  },
+  {
+    title: 'Electron 10 has been released.',
+    date: 'August 26, 2020',
+    link: 'https://www.electronjs.org/blog/electron-10-0',
+    content: 'The Electron team is excited to announce the release of Electron 10.0.0. It includes upgrades to Chromium 85, V8 8.5 and Node 12.16. They\'ve added several new API integrations and improvements.'
+  },
+  {
+    title: 'TypeScript 4.0 released!',
+    date: 'August 20, 2020',
+    link: 'https://devblogs.microsoft.com/typescript/announcing-typescript-4-0',
+    content: 'Today Microsoft announced the availability of TypeScript 4.0! This version of the language represents next generation of TypeScript releases and comes with a variety of new features.'
+  },
+  {
+    title: 'A collective list of APIs.',
+    date: 'August 16, 2020',
+    link: 'https://apilist.fun',
+    content: 'A public list of free APIs for programmers.'
+  },
+  {
     title: 'Coding Games',
     date: 'August 13, 2020',
     link: 'https://x-team.com/blog/coding-games',

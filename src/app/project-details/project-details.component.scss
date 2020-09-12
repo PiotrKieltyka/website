@@ -1,11 +1,11 @@
 .shadowed {
-  text-shadow: 0px 20px 25px rgba(100, 100, 100, 1);
+  text-shadow: 0 20px 25px rgba(100, 100, 100, 1);
 }
 
 .box-shadowed {
   font-weight: 300;
   border-radius: 6px;
-  box-shadow: 0px 20px 25px 0px rgba(100, 100, 100, .5);
+  box-shadow: 0 20px 25px 0 rgba(100, 100, 100, .5);
 }
 
 .btn:hover {
@@ -40,6 +40,6 @@
 }
 
 @keyframes box-breath {
-  from { box-shadow: 0px 20px 25px 0px rgba(100, 100, 100, .5); }
-  to { box-shadow: 0px 0px 0px 0px white; }
+  from { box-shadow: 0 20px 25px 0 rgba(100, 100, 100, .5); }
+  to { box-shadow: 0 0 0 0 white; }
 }

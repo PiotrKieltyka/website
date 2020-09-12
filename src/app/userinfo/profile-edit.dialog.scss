@@ -13,9 +13,9 @@ button {
   background: transparent;
   transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
   &:hover {
-      background-color: rgba(119, 119, 119, .1);
-      opacity: .8;
-      cursor: pointer;
+    background-color: rgba(119, 119, 119, .1);
+    opacity: .8;
+    cursor: pointer;
   }
   &:nth-child(1) {
     color: rgb(114, 0, 0);

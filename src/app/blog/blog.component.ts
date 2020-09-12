@@ -32,7 +32,7 @@ export const MY_FORMATS = {
 })
 export class BlogComponent {
 
-  post: Post = { title: '', date: '', link: '', content: '' };
+  post: Post = { title: '', date: moment().format(), link: '', content: '' };
   blogposts = BlogpostsDB;
 
   constructor(
@@ -43,6 +43,7 @@ export class BlogComponent {
   openAddPostDialog(): void {
     const dialogRef = this.postDialog.open(AddPostDialog, {
       width: '500px',
+      autoFocus: true,
       data: {
         title: this.post.title,
         date: this.post.date,
