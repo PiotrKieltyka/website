@@ -49,8 +49,7 @@
 }
 
 .breath {
-  animation-delay: 1s;
-  animation: box-breath 3s infinite alternate ease-in-out;
+  animation: box-breath 3s 1s infinite alternate ease-in-out;
   will-change: box-shadow;
 }
 
@@ -66,7 +65,7 @@
   @media (min-width: 992px) {
     margin-left: 52.5%;
   }
-  @media(min-width: 1200px) {
+  @media (min-width: 1200px) {
     margin-left: 53.5%;
   }
 }
@@ -145,8 +144,8 @@ hr {
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 @keyframes box-breath {

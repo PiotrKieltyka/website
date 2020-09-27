@@ -14,6 +14,23 @@
   background-position: center;
 }
 
+.overlay {
+  color: #cccccc;
+  position: absolute;
+  left: -10%;
+  bottom: -30%;
+  display: block;
+  background: rgb(127, 129, 127);
+  height: 130px;
+  width: 305px;
+  transform: rotate(-3deg) translate3d(0, 0, 0);
+  border-radius: 10px;
+  text-align: right;
+  padding-right: 1.5rem;
+  transition: .3s all ease-in-out;
+  transition-delay: .1s;
+}
+
 .card {
   margin: 40px auto;
   height: 350px;
@@ -27,11 +44,6 @@
   border: 2px solid rgba(255, 255, 255, .9);
   background-color: rgba(241, 242, 246, .5);
   text-align: center;
-  &:hover {
-    svg:nth-child(n+2) {
-      color: rgb(0, 114, 0);
-    }
-  }
   &:hover .overlay {
     bottom: -22%;
     color: rgb(238, 238, 238);
@@ -46,6 +58,11 @@
     position: absolute;
     transform: translateX(75px) translateY(13px);
   }
+  &:hover {
+    svg:nth-child(n+2) {
+      color: rgb(0, 114, 0);
+    }
+  }
 }
 
 h4 {
@@ -56,7 +73,7 @@ h4 {
   padding: 0;
   color: rgba(0, 0, 0, .9);
   text-shadow: 0 0 2px rgba(119, 119, 119, .8);
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', serif;
   margin-top: 3%;
   font-weight: 400;
   line-height: 1;
@@ -69,7 +86,7 @@ h6 {
   margin-bottom: 5px;
   padding: 0;
   color: rgba(0, 0, 0, .7);
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', serif;
   margin-top: 3%;
   font-weight: 400;
   line-height: 1;
@@ -91,21 +108,4 @@ p {
   margin: 7px auto 0 20px;
   font-weight: 100;
   font-size: 1.2rem;
-}
-
-.overlay {
-  color: #cccccc;
-  position: absolute;
-  left: -10%;
-  bottom: -30%;
-  display: block;
-  background: rgb(127, 129, 127);
-  height: 130px;
-  width: 305px;
-  transform: rotate(-3deg) translate3d(0, 0, 0);
-  border-radius: 10px;
-  text-align: right;
-  padding-right: 1.5rem;
-  transition: .3s all ease-in-out;
-  transition-delay: .1s;
 }

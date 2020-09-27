@@ -14,8 +14,7 @@
 }
 
 .breath {
-  animation-delay: 1s;
-  animation: box-breath 3s infinite alternate ease-in-out;
+  animation: box-breath 3s 1s infinite alternate ease-in-out;
   will-change: box-shadow;
 }
 

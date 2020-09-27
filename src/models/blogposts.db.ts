@@ -2,6 +2,30 @@ import { BlogPost } from './blogpost.model';
 
 export const BlogpostsDB: BlogPost[] = [
   {
+    title: 'date-fns - JavaScript Date Library.',
+    date: 'September 22, 2020',
+    link: 'https://www.sitepoint.com/date-fns-javascript-date-library',
+    content: 'The Moment.js team has announced the project is now consider in maintenance mode. This means that the working group behind the project will not be adding any new features or capabilities. This makes date-fns one of the best alternatives to Moment.js out there.'
+  },
+  {
+    title: '5 SOLID principles with JavaScript.',
+    date: 'September 19, 2020',
+    link: 'https://dev.to/denisveleaev/5-solid-principles-with-javascript-how-to-make-your-code-solid-1kl5',
+    content: 'SOLID principles are strictly related to design patterns. It\'s important to know design patterns because it\'s a hot topic for an interview.'
+  },
+  {
+    title: 'GitHub CLI 1.0 is now available.',
+    date: 'September 17, 2020',
+    link: 'https://github.blog/2020-09-17-github-cli-1-0-is-now-available',
+    content: 'GitHub CLI brings GitHub to your terminal. It reduces context switching, helps you focus, and enables you to more easily script and create your own workflows.'
+  },
+  {
+    title: 'Do U know RxJS?',
+    date: 'September 10, 2020',
+    link: 'https://www.rxjs-fruits.com',
+    content: 'There\'s a game to help you learn RxJS! Written by @BFreakout! It\'s open source, and he is taking PullRequests to add new levels.'
+  },
+  {
     title: 'Type <\Challenge[]>',
     date: 'September 8, 2020',
     link: 'https://github.com/type-challenges/type-challenges',
