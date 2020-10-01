@@ -1,6 +1,6 @@
 export interface BlogPost {
-  content: string,
-  date: string,
-  link?: string,
-  title: string,
+  content: string; // can have HTML tags
+  date: string;
+  link?: string;
+  title: string;
 }

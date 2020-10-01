@@ -9,7 +9,7 @@
         <h6>{{ blogpost.date }}</h6>
       </div>
       <div class="col-md-8 blog-column-2">
-        {{ blogpost.content }}
+        <span [innerHTML]="blogpost.content"></span>
         <hr />
         <a *ngIf="blogpost.link" href="{{ blogpost.link }}">Learn more</a>
       </div>

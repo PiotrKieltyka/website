@@ -2,6 +2,18 @@ import { BlogPost } from './blogpost.model';
 
 export const BlogpostsDB: BlogPost[] = [
   {
+    title: 'GitHub code scanning is available in public repositories.',
+    date: 'September 31, 2020',
+    link: 'https://github.blog/2020-09-30-code-scanning-is-now-available',
+    content: 'GitHub code scanning is a developer-first, GitHub-native approach to easily find security vulnerabilities before they reach production. Code scanning is powered by CodeQL — the world’s most powerful code analysis engine.'
+  },
+  {
+    title: 'Node 14.13.0',
+    date: 'September 29, 2020',
+    link: 'https://nodejs.org/en/blog/release/v14.13.0',
+    content: 'This minor release of Node includes named exports for CommonJS modules via static analysis to ease interoperability.'
+  },
+  {
     title: 'date-fns - JavaScript Date Library.',
     date: 'September 22, 2020',
     link: 'https://www.sitepoint.com/date-fns-javascript-date-library',
@@ -23,7 +35,7 @@ export const BlogpostsDB: BlogPost[] = [
     title: 'Do U know RxJS?',
     date: 'September 10, 2020',
     link: 'https://www.rxjs-fruits.com',
-    content: 'There\'s a game to help you learn RxJS! Written by @BFreakout! It\'s open source, and he is taking PullRequests to add new levels.'
+    content: 'There\'s a game to help you learn RxJS! Written by <a href="https://twitter.com/bfreakout">@BFreakout</a>! It\'s open source, and he is taking PullRequests to add new levels.'
   },
   {
     title: 'Type <\Challenge[]>',
