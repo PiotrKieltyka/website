@@ -2,6 +2,84 @@ import { BlogPost } from './blogpost.model';
 
 export const BlogpostsDB: BlogPost[] = [
   {
+    title: 'Why U should start contributing to open source software right now.',
+    date: 'November 14, 2020',
+    link: 'https://dev.to/mhatvan/why-you-should-start-contributing-to-open-source-software-right-now-3mp0',
+    content: 'U might not be aware of it, but U use some form of open source software every single day. The open source movement is growing quickly and U should become a part of it too.'
+  },
+  {
+    title: 'JavaScript Algorithms and Data Structures.',
+    date: 'November 13, 2020',
+    link: 'https://github.com/trekhleb/javascript-algorithms',
+    content: 'JavaScript Algorithms (59,500 stars) contains a tremendous amount of JavaScript-based examples of popular and less popular algorithms and data structures. The structure is really nice because the examples are labeled either beginner or advanced. So whether U are interested in cryptography, sorting, graphs or even machine learning (and much more), there will be something for U.'
+  },
+  {
+    title: 'Angular 11 is here!',
+    date: 'November 12, 2020',
+    link: 'https://blog.angular.io/version-11-of-angular-now-available-74721b7952f7',
+    content: 'Big news - Angular Version 11.0.0 is released. This major release has updates across the platform including the framework, the CLI and components.'
+  },
+  {
+    title: 'Operator Lookup - a search engine for JavaScript operators.',
+    date: 'November 10, 2020',
+    link: 'https://joshwcomeau.com/operator-lookup',
+    content: '<a href="https://twitter.com/joshwcomeau">@JoshWComeau</a> made this great site called Operator Lookup that explains how JavaScript operators work. There are some code examples to explain what they do as well, which is pretty handy.'
+  },
+  {
+    title: 'Explore stars in the universe.',
+    date: 'November 8, 2020',
+    link: 'https://stars.chromeexperiments.com',
+    content: '100.000 Stars is an interactive visualization of the stellar neighborhood. It shows the location of 119.617 nearby stars derived from multiple sources, including the 1989 Hipparcos mission. Zooming in reveals 87 individually identified stars and our solar system.'
+  },
+  {
+    title: 'Awesome',
+    date: 'November 5, 2020',
+    link: 'https://github.com/sindresorhus/awesome',
+    content: 'Awesome is, without a doubt, the most popular repo that curates all topics from software development to hardware to business. It has more than 123,000 stars on Github at this moment, and one could spend days (nights) browsing it.'
+  },
+  {
+    title: 'An Angular implementation of the IBM Carbon Design System.',
+    date: 'November 2, 2020',
+    link: 'https://angular.carbondesignsystem.com',
+    content: 'Carbon is an open-source design system built by IBM. With the IBM Design Language as its foundation, the system consists of working code, design tools and resources, human interface guidelines, and a vibrant community of contributors.'
+  },
+  {
+    title: 'NPM public roadmap.',
+    date: 'October 22, 2020',
+    link: 'https://github.blog/2020-10-22-introducing-the-npm-public-roadmap-and-a-new-feedback-process',
+    content: 'NPM Team announced a new npm public roadmap + feedback process! U can now see what is coming and get involved.'
+  },
+  {
+    title: 'Node.js v15.0.0 is here!',
+    date: 'October 21, 2020',
+    link: 'https://nodejs.medium.com/node-js-v15-0-0-is-here-deb00750f278',
+    content: 'NPM Team is excited to announce that Node.js 15 was released today. Node.js 15 replaces Node.js 14 as our ‘current’ release line, with Node.js 14 being promoted to LTS (long-term support) later this month.'
+  },
+  {
+    title: '7.0.0 of the npm CLI.',
+    date: 'October 13, 2020',
+    link: 'https://github.blog/2020-10-13-presenting-v7-0-0-of-the-npm-cli',
+    content: 'NPM Team is excited to announce the release of npm v7.0.0, which will be shipping with Node.js 15.0.0 next week. npm 7 comes with some long-awaited and requested features including: workspaces, automatically installing peer dependencies, package-lock v2 and support for yarn.lock.'
+  },
+  {
+    title: 'Webpack 5.0.0 is here.',
+    date: 'October 10, 2020',
+    link: 'https://webpack.js.org/blog/2020-10-10-webpack-5-release',
+    content: 'Webpack major release with faster builds, smaller builds, federated modules (faster scaled builds), better stats, better module types, asset modules, top level await and other spec support.'
+  },
+  {
+    title: 'Tailwind Play.',
+    date: 'October 8, 2020',
+    link: 'https://play.tailwindcss.com',
+    content: 'Tailwind Play, the official Tailwind CSS online playground! It gives U access to all of Tailwind\'s build-time only features directly in the browser.'
+  },
+  {
+    title: 'Try something .new',
+    date: 'October 3, 2020',
+    link: 'https://whats.new/shortcuts',
+    content: 'Whether U\'re working on a school project or starting a creative endeavor, there\'s a <b>.new</b> link that can help U get things done faster.'
+  },
+  {
     title: 'GitHub code scanning is available in public repositories.',
     date: 'September 31, 2020',
     link: 'https://github.blog/2020-09-30-code-scanning-is-now-available',
@@ -29,19 +107,19 @@ export const BlogpostsDB: BlogPost[] = [
     title: 'GitHub CLI 1.0 is now available.',
     date: 'September 17, 2020',
     link: 'https://github.blog/2020-09-17-github-cli-1-0-is-now-available',
-    content: 'GitHub CLI brings GitHub to your terminal. It reduces context switching, helps you focus, and enables you to more easily script and create your own workflows.'
+    content: 'GitHub CLI brings GitHub to your terminal. It reduces context switching, helps U focus, and enables U to more easily script and create your own workflows.'
   },
   {
     title: 'Do U know RxJS?',
     date: 'September 10, 2020',
     link: 'https://www.rxjs-fruits.com',
-    content: 'There\'s a game to help you learn RxJS! Written by <a href="https://twitter.com/bfreakout">@BFreakout</a>! It\'s open source, and he is taking PullRequests to add new levels.'
+    content: 'There\'s a game to help U learn RxJS! Written by <a href="https://twitter.com/bfreakout">@BFreakout</a>! It\'s open source, and he is taking PullRequests to add new levels.'
   },
   {
     title: 'Type <\Challenge[]>',
     date: 'September 8, 2020',
     link: 'https://github.com/type-challenges/type-challenges',
-    content: 'Collection of TypeScript type challenges. This project is aim to help you better understand how the type system works, writing your own utilities, or just having fun with the challenges.'
+    content: 'Collection of TypeScript type challenges. This project is aim to help U better understand how the type system works, writing your own utilities, or just having fun with the challenges.'
   },
   {
     title: 'Will it CORS?',
@@ -65,7 +143,7 @@ export const BlogpostsDB: BlogPost[] = [
     title: 'GitHub is renaming the default branch from master to main.',
     date: 'August 27, 2020',
     link: 'https://github.blog/changelog/2020-08-26-set-the-default-branch-for-newly-created-repositories',
-    content: 'You can now set the default branch name for newly-created repositories under your username. On October 1, 2020, if you haven\'t changed the default branch for new repositories it will automatically change from master to main.'
+    content: 'You can now set the default branch name for newly-created repositories under your username. On October 1, 2020, if U haven\'t changed the default branch for new repositories it will automatically change from master to main.'
   },
   {
     title: 'Electron 10 has been released.',

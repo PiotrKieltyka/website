@@ -3,4 +3,5 @@ export interface BlogPost {
   date: string;
   link?: string;
   title: string;
+  _id?: string;
 }

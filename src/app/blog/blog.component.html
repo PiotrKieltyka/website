@@ -10,7 +10,7 @@
       </div>
       <div class="col-md-8 blog-column-2">
         <span [innerHTML]="blogpost.content"></span>
-        <hr />
+        <hr id="blog-line"/>
         <a *ngIf="blogpost.link" href="{{ blogpost.link }}">Learn more</a>
       </div>
     </div>

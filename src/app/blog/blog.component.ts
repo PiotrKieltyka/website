@@ -1,17 +1,11 @@
 import {Component, Inject} from '@angular/core';
-import { BlogpostsDB } from 'src/models/blogposts.db';
+import {BlogPost} from '../../models/blogpost.model';
 import {AuthService} from '../services/auth.service';
 import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 import {MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS} from '@angular/material-moment-adapter';
 import * as moment from 'moment';
-
-interface Post {
-  title: string;
-  date: string;
-  link?: string;
-  content: string;
-}
+import {WebsiteDBService} from '../services/websitedb.service';
 
 export const MY_FORMATS = {
   parse: {
@@ -32,13 +26,16 @@ export const MY_FORMATS = {
 })
 export class BlogComponent {
 
-  post: Post = { title: '', date: moment().format(), link: '', content: '' };
-  blogposts = BlogpostsDB;
+  post: BlogPost = { title: '', date: moment().format(), link: '', content: '' };
+  blogposts: BlogPost[] = [];
 
   constructor(
     public postDialog: MatDialog,
     public authService: AuthService,
-  ) { }
+    public dbService: WebsiteDBService
+  ) {
+    this.getAllPosts();
+  }
 
   openAddPostDialog(): void {
     const dialogRef = this.postDialog.open(AddPostDialog, {
@@ -54,9 +51,15 @@ export class BlogComponent {
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         result.date = moment(result.date).format('MMMM D, YYYY');
-        console.log(result);
+        this.dbService.addPost(result);
+        this.blogposts = [];
+        this.getAllPosts();
       }
     });
+  }
+
+  getAllPosts(): void {
+    this.dbService.getAllPosts().subscribe((result: {posts: BlogPost[]}) => this.blogposts = result.posts);
   }
 }
 
@@ -78,7 +81,7 @@ export class BlogComponent {
 export class AddPostDialog {
   constructor(
     public dialogRef: MatDialogRef<AddPostDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: Post
+    @Inject(MAT_DIALOG_DATA) public data: BlogPost
   ) {}
 
   onNoClick(): void {
