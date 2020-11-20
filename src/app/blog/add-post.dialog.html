@@ -2,7 +2,8 @@
 <div mat-dialog-content class="add-post-data">
   <mat-form-field>
     <mat-label>Title</mat-label>
-    <input matInput [(ngModel)]="data.title" cdkFocusInitial>
+    <input matInput [(ngModel)]="data.title" cdkFocusInitial required>
+    <mat-error>This field is required</mat-error>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Date</mat-label>
@@ -16,7 +17,8 @@
   </mat-form-field>
   <mat-form-field>
     <mat-label>Content</mat-label>
-    <input matInput [(ngModel)]="data.content">
+    <input matInput [(ngModel)]="data.content" required>
+    <mat-error>This field is required</mat-error>
   </mat-form-field>
 </div>
 <div mat-dialog-actions class="add-post-buttons">

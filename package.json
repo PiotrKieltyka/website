@@ -9,7 +9,7 @@
   "scripts": {
     "ng": "ng",
     "host": "node -p \"require('ip').address()\"",
-    "start": "ng serve --port=4210 --open",
+    "start": "ng serve --port=4210 --open --hmr",
     "build": "ng build",
     "prod": "ng build --prod new-site",
     "test": "ng test",

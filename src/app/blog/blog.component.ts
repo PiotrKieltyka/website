@@ -41,12 +41,7 @@ export class BlogComponent {
     const dialogRef = this.postDialog.open(AddPostDialog, {
       width: '500px',
       autoFocus: true,
-      data: {
-        title: this.post.title,
-        date: this.post.date,
-        link: this.post.link,
-        content: this.post.content
-      }
+      data: {...this.post}
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
