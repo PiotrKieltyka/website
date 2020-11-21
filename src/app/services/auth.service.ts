@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import { User } from 'firebase';
+import firebase from 'firebase/app';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ import { User } from 'firebase';
 export class AuthService {
 
   isLoggedIn = false;
-  userData: User;
+  userData: firebase.User;
   redirectUrl: string;
 
   constructor(
@@ -28,7 +28,7 @@ export class AuthService {
     });
   }
 
-  async updateProfile(user: User): Promise<void> {
+  async updateProfile(user: firebase.User): Promise<void> {
     (await this.angularFireAuth.currentUser).updateProfile({
       displayName: user.displayName,
       photoURL: user.photoURL,

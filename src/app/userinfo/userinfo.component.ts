@@ -1,8 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { User } from 'firebase';
-import { HttpClient } from '@angular/common/http';
+import firebase from 'firebase/app';
 
 @Component({
   selector: 'site-userinfo',
@@ -11,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserinfoComponent implements OnInit {
 
-  user: User;
+  user: firebase.User;
 
   constructor(
     public dialog: MatDialog,
@@ -25,14 +24,7 @@ export class UserinfoComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(ProfileDialog, {
       width: '250px',
-      data: {
-        uid: this.user.uid,
-        displayName: this.user.displayName,
-        email: this.user.email,
-        emailVerified: this.user.emailVerified,
-        phoneNumber: this.user.phoneNumber,
-        photoURL: this.user.photoURL,
-      }
+      data: {...this.user}
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
@@ -51,7 +43,7 @@ export class UserinfoComponent implements OnInit {
 export class ProfileDialog {
   constructor(
     public dialogRef: MatDialogRef<ProfileDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: User) {}
+    @Inject(MAT_DIALOG_DATA) public data: firebase.User) {}
 
   onNoClick(): void {
     this.dialogRef.close();
