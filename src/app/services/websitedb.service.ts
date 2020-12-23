@@ -12,11 +12,11 @@ export class WebsiteDBService {
   ) { }
 
   getAllPosts() {
-    return this.http.get('https://piotrkieltyka-website-node.herokuapp.com/api/posts/');
+    return this.http.get('https://node.piotrkieltyka.website/api/posts/');
   }
 
   addPost(post: BlogPost) {
-    this.http.post('https://piotrkieltyka-website-node.herokuapp.com/api/posts/', JSON.stringify(post), this.addHeaders())
+    return this.http.post('https://node.piotrkieltyka.website/api/posts/', JSON.stringify(post), this.addHeaders())
       .subscribe(data => data, err => console.error(err));
   }
 

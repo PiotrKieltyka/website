@@ -47,13 +47,11 @@ export class BlogComponent {
       if (result) {
         result.date = moment(result.date).format('MMMM D, YYYY');
         this.dbService.addPost(result);
-        this.blogposts = [];
-        this.getAllPosts();
       }
     });
   }
 
-  getAllPosts(): void {
+  getAllPosts() {
     this.dbService.getAllPosts().subscribe((result: {posts: BlogPost[]}) => this.blogposts = result.posts);
   }
 }
