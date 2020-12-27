@@ -144,9 +144,9 @@ export class ParticlesComponent implements AfterViewInit, OnDestroy {
   }
 
   repulse(p: SingleParticle) {
-    // tslint:disable-next-line: one-variable-per-declaration
+    // eslint-disable-next-line one-var
     const dxMouse = p.x - this.interaction.pos_x, dyMouse = p.y - this.interaction.pos_y, distMouse = Math.sqrt(Math.pow(dxMouse, 2) + Math.pow(dyMouse, 2));
-    // tslint:disable-next-line: one-variable-per-declaration
+    // eslint-disable-next-line one-var
     const velocity = 5, repulseFactor = Math.min(Math.max((1 / this.repulseDistance) * (-1 * Math.pow(distMouse / this.repulseDistance, 2) + 1) * this.repulseDistance * velocity, 0), 50);
     p.x = p.x - dxMouse / distMouse * repulseFactor;
     p.y = p.y - dyMouse / distMouse * repulseFactor;
