@@ -5,7 +5,7 @@
 .box-shadowed {
   font-weight: 300;
   border-radius: 6px;
-  box-shadow: 0 20px 25px 0 rgba(100, 100, 100, .5);
+  box-shadow: 0 20px 25px 0 rgba(100, 100, 100, 0.5);
 }
 
 .btn:hover {
@@ -24,12 +24,12 @@
 
 .tags span:nth-child(n):after {
   bottom: 0;
-  content: "";
+  content: '';
   display: block;
   height: 1px;
   left: 50%;
   background: rgb(7, 15, 87);
-  transition: width .3s ease 0s, left .3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
 
@@ -39,6 +39,10 @@
 }
 
 @keyframes box-breath {
-  from { box-shadow: 0 20px 25px 0 rgba(100, 100, 100, .5); }
-  to { box-shadow: 0 0 0 0 white; }
+  from {
+    box-shadow: 0 20px 25px 0 rgba(100, 100, 100, 0.5);
+  }
+  to {
+    box-shadow: 0 0 0 0 white;
+  }
 }

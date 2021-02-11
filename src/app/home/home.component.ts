@@ -1,8 +1,4 @@
-import {
-  Component,
-  AfterContentInit,
-  OnInit
-} from '@angular/core';
+import { Component, AfterContentInit, OnInit } from '@angular/core';
 
 @Component({
   selector: 'site-home',
@@ -10,7 +6,6 @@ import {
   templateUrl: './home.component.html',
 })
 export class HomeComponent implements OnInit, AfterContentInit {
-
   time: Date;
 
   ngOnInit(): void {
@@ -28,9 +23,8 @@ export class HomeComponent implements OnInit, AfterContentInit {
   }
 
   utcTime(): void {
-    setInterval( () => {
+    setInterval(() => {
       this.time = new Date();
     }, 1000);
   }
-
 }

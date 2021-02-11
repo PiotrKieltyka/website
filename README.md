@@ -8,5 +8,6 @@ Developers don't talk much. Their code does all the talking.
 
 Try to find some easter eggs..
 
-------------
+---
+
 Code released under the MIT License.

@@ -66,7 +66,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-],
+  ],
   exports: [
     MatAutocompleteModule,
     MatButtonModule,
@@ -99,6 +99,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
-],
+  ],
 })
-export class MaterialModule { }
+export class MaterialModule {}

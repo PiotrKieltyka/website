@@ -1,11 +1,22 @@
-import {Component, Inject} from '@angular/core';
-import {BlogPost} from '../../models/blogpost.model';
-import {AuthService} from '../services/auth.service';
-import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
-import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
-import {MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS} from '@angular/material-moment-adapter';
+import { Component, Inject } from '@angular/core';
+import { BlogPost } from '../../models/blogpost.model';
+import { AuthService } from '../services/auth.service';
+import {
+  MAT_DIALOG_DATA,
+  MatDialog,
+  MatDialogRef,
+} from '@angular/material/dialog';
+import {
+  DateAdapter,
+  MAT_DATE_FORMATS,
+  MAT_DATE_LOCALE,
+} from '@angular/material/core';
+import {
+  MomentDateAdapter,
+  MAT_MOMENT_DATE_ADAPTER_OPTIONS,
+} from '@angular/material-moment-adapter';
 import * as moment from 'moment';
-import {WebsiteDBService} from '../services/websitedb.service';
+import { WebsiteDBService } from '../services/websitedb.service';
 
 export const MY_FORMATS = {
   parse: {
@@ -16,7 +27,7 @@ export const MY_FORMATS = {
     monthYearLabel: 'MMM YYYY',
     dateA11yLabel: 'LL',
     monthYearA11yLabel: 'MMM YYYY',
-  }
+  },
 };
 
 @Component({
@@ -25,8 +36,12 @@ export const MY_FORMATS = {
   styleUrls: ['./blog.component.scss'],
 })
 export class BlogComponent {
-
-  private post: BlogPost = { title: '', date: moment().format(), link: '', content: '' };
+  private post: BlogPost = {
+    title: '',
+    date: moment().format(),
+    link: '',
+    content: '',
+  };
   blogposts: BlogPost[] = [];
 
   constructor(
@@ -41,9 +56,9 @@ export class BlogComponent {
     const dialogRef = this.postDialog.open(AddPostDialog, {
       width: '500px',
       autoFocus: true,
-      data: {...this.post}
+      data: { ...this.post },
     });
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         result.date = moment(result.date).format('MMMM D, YYYY');
         this.dbService.addPost(result);
@@ -52,7 +67,11 @@ export class BlogComponent {
   }
 
   getAllPosts() {
-    this.dbService.getAllPosts().subscribe((result: {posts: BlogPost[]}) => this.blogposts = result.posts);
+    this.dbService
+      .getAllPosts()
+      .subscribe(
+        (result: { posts: BlogPost[] }) => (this.blogposts = result.posts)
+      );
   }
 }
 
@@ -61,11 +80,12 @@ export class BlogComponent {
     {
       provide: DateAdapter,
       useClass: MomentDateAdapter,
-      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
+      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS],
     },
     {
-      provide: MAT_DATE_FORMATS, useValue: MY_FORMATS
-    }
+      provide: MAT_DATE_FORMATS,
+      useValue: MY_FORMATS,
+    },
   ],
   selector: 'site-addPostDialog',
   templateUrl: './add-post.dialog.html',

@@ -21,11 +21,14 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { LoginComponent } from './login/login.component';
 import { environment } from 'src/environments/environment';
 import { AuthService } from './services/auth.service';
-import { UserinfoComponent, ProfileDialog } from './userinfo/userinfo.component';
+import {
+  UserinfoComponent,
+  ProfileDialog,
+} from './userinfo/userinfo.component';
 import { LoaderComponent } from './loader/loader.component';
 import { LoaderService } from './services/loader.service';
 import { LoaderInterceptor } from './interceptors/loader.interceptor';
-import {AddPostDialog, BlogComponent} from './blog/blog.component';
+import { AddPostDialog, BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -46,10 +49,7 @@ import {AddPostDialog, BlogComponent} from './blog/blog.component';
     BlogComponent,
     AddPostDialog,
   ],
-  entryComponents: [
-    ProfileDialog,
-    AddPostDialog,
-  ],
+  entryComponents: [ProfileDialog, AddPostDialog],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -59,17 +59,14 @@ import {AddPostDialog, BlogComponent} from './blog/blog.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  exports: [
-    MaterialModule,
-  ],
+  exports: [MaterialModule],
   providers: [
     LoaderService,
     { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
     AuthService,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-
-export class AppModule { }
+export class AppModule {}

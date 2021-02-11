@@ -1,6 +1,6 @@
 import { MeetupsDB } from './../../models/meetups.db';
 import { Component, OnInit } from '@angular/core';
-import {Meetup} from '../../models/meetup.model';
+import { Meetup } from '../../models/meetup.model';
 
 @Component({
   selector: 'site-meetup-details-card',
@@ -8,14 +8,13 @@ import {Meetup} from '../../models/meetup.model';
   templateUrl: './meetup-details-card.component.html',
 })
 export class MeetupDetailsCardComponent implements OnInit {
-
   meetups: Meetup[] = MeetupsDB;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  get m() {
+    return this.meetups;
   }
-
-  get m() { return this.meetups; }
-
 }

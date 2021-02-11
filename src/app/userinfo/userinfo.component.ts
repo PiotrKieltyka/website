@@ -1,6 +1,10 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import {
+  MatDialog,
+  MatDialogRef,
+  MAT_DIALOG_DATA,
+} from '@angular/material/dialog';
 import firebase from 'firebase/app';
 
 @Component({
@@ -9,13 +13,9 @@ import firebase from 'firebase/app';
   templateUrl: './userinfo.component.html',
 })
 export class UserinfoComponent implements OnInit {
-
   user: firebase.User;
 
-  constructor(
-    public dialog: MatDialog,
-    private authService: AuthService
-  ) { }
+  constructor(public dialog: MatDialog, private authService: AuthService) {}
 
   ngOnInit() {
     this.user = this.authService.userData;
@@ -24,9 +24,9 @@ export class UserinfoComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(ProfileDialog, {
       width: '250px',
-      data: {...this.user}
+      data: { ...this.user },
     });
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         this.authService.updateProfile(result);
         this.user = result;
@@ -38,12 +38,13 @@ export class UserinfoComponent implements OnInit {
 @Component({
   selector: 'site-dialog',
   templateUrl: './profile-edit.dialog.html',
-  styleUrls: ['./profile-edit.dialog.scss']
+  styleUrls: ['./profile-edit.dialog.scss'],
 })
 export class ProfileDialog {
   constructor(
     public dialogRef: MatDialogRef<ProfileDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: firebase.User) {}
+    @Inject(MAT_DIALOG_DATA) public data: firebase.User
+  ) {}
 
   onNoClick(): void {
     this.dialogRef.close();

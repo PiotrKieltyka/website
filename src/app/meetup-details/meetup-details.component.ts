@@ -7,14 +7,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './meetup-details.component.html',
 })
 export class MeetupDetailsComponent implements OnInit {
-
   meetups = MeetupsDB;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  get m() {
+    return this.meetups;
   }
-
-  get m() { return this.meetups; }
-
 }

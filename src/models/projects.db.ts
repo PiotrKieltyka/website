@@ -1,7 +1,6 @@
-import {Project} from './project.model';
+import { Project } from './project.model';
 
 export const ProjectsDB: Project[] = [
-
   // {
   //     position: 'left',
   //     title: 'Portfolio',
@@ -21,7 +20,8 @@ export const ProjectsDB: Project[] = [
     date: '2020-05-10',
     tags: ['HTML', 'CSS', 'RWD'],
     featured_image: '../assets/social-desktop-preview.jpg',
-    project_link: 'https://piotrkieltyka.github.io/frontendmentor-social-media-dashboard',
+    project_link:
+      'https://piotrkieltyka.github.io/frontendmentor-social-media-dashboard',
     button_icon: 'fab fa-css3-alt',
     button_text: 'Visit project',
     categories: 'development',
@@ -29,11 +29,13 @@ export const ProjectsDB: Project[] = [
   {
     position: 'right',
     title: 'Fylo Landing Page',
-    lead_text: 'Fylo landing page with dark theme and features grid / Frontend Mentor',
+    lead_text:
+      'Fylo landing page with dark theme and features grid / Frontend Mentor',
     date: '2020-05-23',
     tags: ['HTML', 'CSS', 'RWD'],
     featured_image: '../assets/fylo-desktop-preview.jpg',
-    project_link: 'https://piotrkieltyka.github.io/frontendmentor-fylo-dark-theme-landing-page',
+    project_link:
+      'https://piotrkieltyka.github.io/frontendmentor-fylo-dark-theme-landing-page',
     button_icon: 'fab fa-css3-alt',
     button_text: 'Visit project',
     categories: 'development',
@@ -45,7 +47,8 @@ export const ProjectsDB: Project[] = [
     date: '2020-05-20',
     tags: ['HTML', 'CSS', 'RWD'],
     featured_image: '../assets/huddle-desktop-preview.jpg',
-    project_link: 'https://piotrkieltyka.github.io/frontendmentor-huddle-landing-page-with-curved-sections',
+    project_link:
+      'https://piotrkieltyka.github.io/frontendmentor-huddle-landing-page-with-curved-sections',
     button_icon: 'fab fa-css3-alt',
     button_text: 'Visit project',
     categories: 'development',
@@ -89,7 +92,8 @@ export const ProjectsDB: Project[] = [
   {
     position: 'left',
     title: 'userApp Node Server',
-    lead_text: 'API written in TypeScript using Node, Express and connected to MongoDB via Mongoose',
+    lead_text:
+      'API written in TypeScript using Node, Express and connected to MongoDB via Mongoose',
     date: '2018-11-29',
     tags: ['TypeScript', 'Express', 'NodeJS', 'MongoDB', 'Rest API'],
     featured_image: '../assets/01_userApp-nodeServer.jpg',
@@ -101,7 +105,8 @@ export const ProjectsDB: Project[] = [
   {
     position: 'right',
     title: 'Monitoring App',
-    lead_text: 'Project created for an android phones and tablets to monitoring production and packaging products',
+    lead_text:
+      'Project created for an android phones and tablets to monitoring production and packaging products',
     date: '2019-01-29',
     tags: ['Angular', 'Material', 'RWD', 'TypeScript', 'Android', 'JSON'],
     featured_image: '../assets/04-rwd-production-monitor.jpg',
@@ -125,7 +130,7 @@ export const ProjectsDB: Project[] = [
   {
     position: 'right',
     title: 'Apartamenty na Polanie',
-    lead_text: 'Project created for my residents\' association',
+    lead_text: "Project created for my residents' association",
     date: '2015-05-08',
     tags: ['HTML', 'CSS', 'JavaScript'],
     featured_image: '../assets/03-anp1-website.jpg',

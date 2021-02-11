@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './personal-studies.component.html',
 })
 export class PersonalStudiesComponent implements OnInit {
-
   studies = StudiesDB;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  get s() {
+    return this.studies;
   }
-
-  get s() { return this.studies; }
 }

@@ -7,7 +7,7 @@
   border: none;
   background-color: transparent;
   @media (max-width: 767px) {
-    margin-top: .75rem;
+    margin-top: 0.75rem;
   }
 }
 
@@ -28,7 +28,7 @@
 }
 
 .nav-buttons {
-  margin-right: .7rem;
+  margin-right: 0.7rem;
   color: rgba(119, 119, 119, 0.7);
   button {
     border: 0;
@@ -36,7 +36,7 @@
     background-color: transparent;
     margin-top: 1rem;
     svg {
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
   }
   button:hover {
@@ -45,5 +45,5 @@
 }
 
 .active {
-  color: rgba(59, 91, 151, .7);
+  color: rgba(59, 91, 151, 0.7);
 }

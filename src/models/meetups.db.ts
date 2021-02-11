@@ -1,4 +1,4 @@
-import {Meetup} from './meetup.model';
+import { Meetup } from './meetup.model';
 
 export const MeetupsDB: Meetup[] = [
   {
@@ -70,11 +70,8 @@ export const MeetupsDB: Meetup[] = [
     title: 'Rolling Scopes #48',
     date: 'May 25, 2018',
     featured_image: '../assets/rollingscopes.svg',
-    topics: [
-      '\"Backend For Frontend\“ with NestJS: usage patterns',
-    ],
+    topics: ['"Backend For Frontend“ with NestJS: usage patterns'],
     link: 'https://rollingscopes.com',
-
   },
   {
     title: 'Angular Tricity #2',
@@ -91,11 +88,7 @@ export const MeetupsDB: Meetup[] = [
     title: 'Angular Tricity #1',
     date: 'March 22, 2018',
     featured_image: '../assets/angular_tricity.png',
-    topics: [
-      'Component testing',
-      'Directives',
-      'Streams',
-    ],
+    topics: ['Component testing', 'Directives', 'Streams'],
     link: 'https://pl-pl.facebook.com/AngularTricity/',
   },
   {
@@ -109,5 +102,5 @@ export const MeetupsDB: Meetup[] = [
       'Easy Mobile Apps with Ionic 2 Framework',
     ],
     link: 'https://rollingscopes.com',
-  }
+  },
 ];

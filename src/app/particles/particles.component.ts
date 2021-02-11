@@ -1,4 +1,10 @@
-import { Component, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
+import {
+  Component,
+  ViewChild,
+  ElementRef,
+  AfterViewInit,
+  OnDestroy,
+} from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { SingleParticle } from 'src/models/particle.model';
 
@@ -8,7 +14,6 @@ import { SingleParticle } from 'src/models/particle.model';
   templateUrl: './particles.component.html',
 })
 export class ParticlesComponent implements AfterViewInit, OnDestroy {
-
   number = 50;
   linkDistance = 80;
   linkWidth = 1;
@@ -30,7 +35,7 @@ export class ParticlesComponent implements AfterViewInit, OnDestroy {
 
   @ViewChild('particles', { static: true }) particlesCanvas: ElementRef;
 
-  constructor() { }
+  constructor() {}
 
   ngAfterViewInit() {
     this.canvas = this.particlesCanvas.nativeElement;
@@ -103,13 +108,13 @@ export class ParticlesComponent implements AfterViewInit, OnDestroy {
       vx: 0,
       vy: 0,
       x: 0,
-      y: 0
+      y: 0,
     };
     let p2: SingleParticle = {
       vx: 0,
       vy: 0,
       x: 0,
-      y: 0
+      y: 0,
     };
     let ms = 0;
 
@@ -120,14 +125,14 @@ export class ParticlesComponent implements AfterViewInit, OnDestroy {
       p.y += p.vy * ms;
 
       if (p.x - this.size > this.canvasWidth) {
-        p.x = - this.size;
+        p.x = -this.size;
         p.y = Math.random() * this.canvasHeight;
       } else if (p.x + this.size < 0) {
         p.x = this.canvasWidth + this.size;
         p.y = Math.random() * this.canvasHeight;
       }
       if (p.y - this.size > this.canvasHeight) {
-        p.y = - this.size;
+        p.y = -this.size;
         p.x = Math.random() * this.canvasWidth;
       } else if (p.y + this.size < 0) {
         p.y = this.canvasHeight + this.size;
@@ -145,17 +150,29 @@ export class ParticlesComponent implements AfterViewInit, OnDestroy {
 
   repulse(p: SingleParticle) {
     // eslint-disable-next-line one-var
-    const dxMouse = p.x - this.interaction.pos_x, dyMouse = p.y - this.interaction.pos_y, distMouse = Math.sqrt(Math.pow(dxMouse, 2) + Math.pow(dyMouse, 2));
+    const dxMouse = p.x - this.interaction.pos_x,
+      dyMouse = p.y - this.interaction.pos_y,
+      distMouse = Math.sqrt(Math.pow(dxMouse, 2) + Math.pow(dyMouse, 2));
     // eslint-disable-next-line one-var
-    const velocity = 5, repulseFactor = Math.min(Math.max((1 / this.repulseDistance) * (-1 * Math.pow(distMouse / this.repulseDistance, 2) + 1) * this.repulseDistance * velocity, 0), 50);
-    p.x = p.x - dxMouse / distMouse * repulseFactor;
-    p.y = p.y - dyMouse / distMouse * repulseFactor;
+    const velocity = 5,
+      repulseFactor = Math.min(
+        Math.max(
+          (1 / this.repulseDistance) *
+            (-1 * Math.pow(distMouse / this.repulseDistance, 2) + 1) *
+            this.repulseDistance *
+            velocity,
+          0
+        ),
+        50
+      );
+    p.x = p.x - (dxMouse / distMouse) * repulseFactor;
+    p.y = p.y - (dyMouse / distMouse) * repulseFactor;
   }
 
   linkParticles(p1: SingleParticle, p2: SingleParticle) {
     const dist = Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
     if (dist <= this.linkDistance) {
-      if (.7 - (dist / (1 / .7)) / this.linkDistance > 0) {
+      if (0.7 - dist / (1 / 0.7) / this.linkDistance > 0) {
         this.context.strokeStyle = 'rgba(119, 119,119, .05)'; // particle link color
         this.context.lineWidth = this.linkWidth;
         this.context.beginPath();
@@ -170,7 +187,7 @@ export class ParticlesComponent implements AfterViewInit, OnDestroy {
   render() {
     this.particlesDraw();
     if (this.animating) {
-      window.requestAnimationFrame(callback => this.render());
+      window.requestAnimationFrame((callback) => this.render());
     }
   }
 }

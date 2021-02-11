@@ -9,13 +9,9 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
 })
 export class LoginComponent implements OnInit {
-
   loginForm: FormGroup;
 
-  constructor(
-    private fb: FormBuilder,
-    public authService: AuthService,
-  ) { }
+  constructor(private fb: FormBuilder, public authService: AuthService) {}
 
   ngOnInit() {
     this.createLoginForm();
@@ -24,8 +20,7 @@ export class LoginComponent implements OnInit {
   createLoginForm() {
     this.loginForm = this.fb.group({
       email: ['', [Validators.email, Validators.required]],
-      password: ['', [Validators.required]]
+      password: ['', [Validators.required]],
     });
   }
-
 }

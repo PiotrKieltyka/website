@@ -1,4 +1,4 @@
-import {Study} from './study.model';
+import { Study } from './study.model';
 
 export const StudiesDB: Study[] = [
   {

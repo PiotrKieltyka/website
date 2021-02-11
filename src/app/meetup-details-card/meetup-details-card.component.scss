@@ -12,7 +12,7 @@
   background-size: 130%;
   background-repeat: no-repeat;
   background-position: center;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
   &:hover {
     background-size: 135%;
   }
@@ -31,8 +31,8 @@
   border-radius: 10px;
   text-align: right;
   padding-right: 1.5rem;
-  transition: .3s all ease-in-out;
-  transition-delay: .1s;
+  transition: 0.3s all ease-in-out;
+  transition-delay: 0.1s;
 }
 
 .card {
@@ -41,29 +41,30 @@
   max-width: 275px;
   min-width: 275px;
   width: 100%;
-  box-shadow: 0 20px 25px 0 rgba(100, 100, 100, .5), 0 0 25px rgba(100, 100, 100, .5);
+  box-shadow: 0 20px 25px 0 rgba(100, 100, 100, 0.5),
+    0 0 25px rgba(100, 100, 100, 0.5);
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  border: 2px solid rgba(255, 255, 255, .9);
-  background-color: rgba(241, 242, 246, .5);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  background-color: rgba(241, 242, 246, 0.5);
   text-align: center;
   &:hover .overlay {
     bottom: -22%;
     color: rgb(238, 238, 238);
   }
   svg:nth-child(1) {
-    color: rgba(255, 255, 255, .9);
+    color: rgba(255, 255, 255, 0.9);
     position: absolute;
     transform: translateX(-95px) translateY(13px);
   }
-  svg:nth-child(n+2) {
+  svg:nth-child(n + 2) {
     color: rgb(163, 168, 245);
     position: absolute;
     transform: translateX(75px) translateY(13px);
   }
   &:hover {
-    svg:nth-child(n+2) {
+    svg:nth-child(n + 2) {
       color: rgb(0, 114, 0);
     }
   }
@@ -75,8 +76,8 @@ h4 {
   text-align: center;
   margin-bottom: 5px;
   padding: 0;
-  color: rgba(0, 0, 0, .9);
-  text-shadow: 0 0 2px rgba(119, 119, 119, .8);
+  color: rgba(0, 0, 0, 0.9);
+  text-shadow: 0 0 2px rgba(119, 119, 119, 0.8);
   font-family: 'Roboto Slab', serif;
   margin-top: 3%;
   font-weight: 400;
@@ -89,7 +90,7 @@ h6 {
   text-align: center;
   margin-bottom: 5px;
   padding: 0;
-  color: rgba(0, 0, 0, .7);
+  color: rgba(0, 0, 0, 0.7);
   font-family: 'Roboto Slab', serif;
   margin-top: 3%;
   font-weight: 400;
@@ -100,12 +101,12 @@ hr {
   border-top: 1px solid white;
   width: 75%;
   transform: rotate(-3deg);
-  box-shadow: 0 0 2px 0 rgba(119, 119, 119, .6);
+  box-shadow: 0 0 2px 0 rgba(119, 119, 119, 0.6);
 }
 
 p {
   font-family: 'Roboto Slab', serif;
-  color: rgba(black, .8);
+  color: rgba(black, 0.8);
   width: 85%;
   padding: 0;
   text-align: left;
