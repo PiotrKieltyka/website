@@ -98,7 +98,7 @@ const moveDown = [
           keyframes([
             style({ transform: 'translateY(0%)', offset: 0 }),
             style({ transform: 'translateY(100%)', opacity: '0', offset: 1 }),
-          ])
+          ]),
         ),
       ],
       { optional: true },

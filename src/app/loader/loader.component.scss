@@ -51,7 +51,7 @@
   filter: blur(50px);
 }
 
-.loader:after {
+.loader::after {
   content: '';
   position: absolute;
   top: 10px;
