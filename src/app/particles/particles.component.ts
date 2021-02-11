@@ -4,8 +4,8 @@ import { SingleParticle } from 'src/models/particle.model';
 
 @Component({
   selector: 'site-particles',
+  styleUrls: ['./particles.component.scss'],
   templateUrl: './particles.component.html',
-  styleUrls: ['./particles.component.scss']
 })
 export class ParticlesComponent implements AfterViewInit, OnDestroy {
 

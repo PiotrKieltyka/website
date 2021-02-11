@@ -25,6 +25,6 @@ const siteRoutes: Routes = [
       // anchorScrolling: 'enabled',
     }
     )],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

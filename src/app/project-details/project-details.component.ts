@@ -1,14 +1,15 @@
 import { ProjectsDB } from './../../models/projects.db';
 import { Component, OnInit } from '@angular/core';
+import {Project} from '../../models/project.model';
 
 @Component({
   selector: 'site-project-details',
+  styleUrls: ['./project-details.component.scss'],
   templateUrl: './project-details.component.html',
-  styleUrls: ['./project-details.component.scss']
 })
 export class ProjectDetailsComponent implements OnInit {
 
-  projects = ProjectsDB;
+  projects: Project[] = ProjectsDB;
 
   constructor() { }
 

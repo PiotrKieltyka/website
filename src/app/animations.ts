@@ -1,4 +1,14 @@
-import { animate, animateChild, animation, group, query, style, transition, trigger, keyframes } from '@angular/animations';
+import {
+  animate,
+  animateChild,
+  animation,
+  group,
+  query,
+  style,
+  transition,
+  trigger,
+  keyframes
+} from '@angular/animations';
 
 export const transAnimation = animation([
   style({
@@ -10,7 +20,7 @@ export const transAnimation = animation([
 ]);
 
 const moveToRight = [
-  style({ position: 'relative' }),
+  style({position: 'relative'}),
   query(':enter, :leave', [
     style({
       position: 'absolute',
@@ -20,22 +30,22 @@ const moveToRight = [
     })
   ]),
   query(':enter', [
-    style({ left: '99%'})
+    style({left: '99%'})
   ]),
   query(':leave', animateChild()),
   group([
     query(':leave', [
-      animate('299ms ease-out', style({ left: '-100%'}))
+      animate('299ms ease-out', style({left: '-100%'}))
     ]),
     query(':enter', [
-      animate('299ms ease-out', style({ left: '0%'}))
+      animate('299ms ease-out', style({left: '0%'}))
     ])
   ]),
   query(':enter', animateChild()),
 ];
 
 const moveToLeft = [
-  style({ position: 'relative' }),
+  style({position: 'relative'}),
   query(':enter, :leave', [
     style({
       position: 'absolute',
@@ -45,15 +55,15 @@ const moveToLeft = [
     })
   ]),
   query(':enter', [
-    style({ left: '-101%'})
+    style({left: '-101%'})
   ]),
   query(':leave', animateChild()),
   group([
     query(':leave', [
-      animate('299ms ease-out', style({ left: '100%'}))
+      animate('299ms ease-out', style({left: '100%'}))
     ]),
     query(':enter', [
-      animate('299ms ease-out', style({ left: '0%'}))
+      animate('299ms ease-out', style({left: '0%'}))
     ])
   ]),
   query(':enter', animateChild()),
@@ -70,26 +80,26 @@ const moveDown = [
       backfaceVisibility: 'hidden',
       transformStyle: 'preserve-3d',
     }
-  ), { optional: true }),
+  ), {optional: true}),
   group([
     query(':enter', [
-      style({ 'z-index': 9999}),
+      style({'z-index': 9999}),
       animate('1s 0s ease', keyframes([
-        style({ transform: 'translateY(-100%)', offset: 0, 'z-index': '9999'  }),
-        style({ transform: 'translateY(0%)',  offset: 1 })
+        style({transform: 'translateY(-100%)', offset: 0, 'z-index': '9999'}),
+        style({transform: 'translateY(0%)', offset: 1})
       ]))
-    ], { optional: true }),
+    ], {optional: true}),
     query(':leave', [
       animate('.8s 0s ease-in-out', keyframes([
-        style({ transform: 'translateY(0%)', offset: 0 }),
-        style({ transform: 'translateY(100%)', opacity: '0', offset: 1 })
+        style({transform: 'translateY(0%)', offset: 0}),
+        style({transform: 'translateY(100%)', opacity: '0', offset: 1})
       ]))
-    ], { optional: true }),
+    ], {optional: true}),
   ])
 ];
 
 const moveRight = [
-  style({ position: 'relative' }),
+  style({position: 'relative'}),
   query(':enter, :leave', [
     style({
       position: 'absolute',
@@ -99,15 +109,15 @@ const moveRight = [
     })
   ]),
   query(':enter', [
-    style({ left: '100%'})
+    style({left: '100%'})
   ]),
   query(':leave', animateChild()),
   group([
     query(':leave', [
-      animate('300ms ease-out', style({ left: '-100%'}))
+      animate('300ms ease-out', style({left: '-100%'}))
     ]),
     query(':enter', [
-      animate('300ms ease-out', style({ left: '0%'}))
+      animate('300ms ease-out', style({left: '0%'}))
     ])
   ]),
   query(':enter', animateChild()),

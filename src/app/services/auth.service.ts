@@ -8,9 +8,9 @@ import firebase from 'firebase/app';
 })
 export class AuthService {
 
-  isLoggedIn = false;
-  userData: firebase.User;
+  isLoggedIn: boolean = false;
   redirectUrl: string;
+  public userData: firebase.User;
 
   constructor(
     private angularFireAuth: AngularFireAuth,

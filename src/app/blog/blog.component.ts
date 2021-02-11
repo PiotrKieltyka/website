@@ -22,11 +22,11 @@ export const MY_FORMATS = {
 @Component({
   selector: 'site-blog',
   templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss']
+  styleUrls: ['./blog.component.scss'],
 })
 export class BlogComponent {
 
-  post: BlogPost = { title: '', date: moment().format(), link: '', content: '' };
+  private post: BlogPost = { title: '', date: moment().format(), link: '', content: '' };
   blogposts: BlogPost[] = [];
 
   constructor(
@@ -57,9 +57,6 @@ export class BlogComponent {
 }
 
 @Component({
-  selector: 'site-addPostDialog',
-  templateUrl: './add-post.dialog.html',
-  styleUrls: ['./add-post.dialog.scss'],
   providers: [
     {
       provide: DateAdapter,
@@ -69,7 +66,10 @@ export class BlogComponent {
     {
       provide: MAT_DATE_FORMATS, useValue: MY_FORMATS
     }
-  ]
+  ],
+  selector: 'site-addPostDialog',
+  templateUrl: './add-post.dialog.html',
+  styleUrls: ['./add-post.dialog.scss'],
 })
 export class AddPostDialog {
   constructor(

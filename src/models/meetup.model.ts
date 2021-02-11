@@ -1,7 +1,7 @@
 export interface Meetup {
-    title: string;
-    date: string;
-    featured_image: string;
-    topics: string[];
-    link: string;
+  title: string;
+  date: string;
+  featured_image: string;
+  topics: string[];
+  link: string;
 }

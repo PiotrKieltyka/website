@@ -5,8 +5,8 @@ import firebase from 'firebase/app';
 
 @Component({
   selector: 'site-userinfo',
+  styleUrls: ['./userinfo.component.scss'],
   templateUrl: './userinfo.component.html',
-  styleUrls: ['./userinfo.component.scss']
 })
 export class UserinfoComponent implements OnInit {
 

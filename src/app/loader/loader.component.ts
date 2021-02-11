@@ -4,15 +4,12 @@ import { LoaderService } from '../services/loader.service';
 
 @Component({
   selector: 'site-loader',
+  styleUrls: ['./loader.component.scss'],
   templateUrl: './loader.component.html',
-  styleUrls: ['./loader.component.scss']
 })
 export class LoaderComponent {
 
   isLoading: Subject<boolean> = this.loaderService.isLoading;
-  color = 'primary';
-  mode = 'indeterminate';
-  value = 50;
 
   constructor(
     private loaderService: LoaderService

@@ -1,14 +1,15 @@
 import { MeetupsDB } from './../../models/meetups.db';
 import { Component, OnInit } from '@angular/core';
+import {Meetup} from '../../models/meetup.model';
 
 @Component({
   selector: 'site-meetup-details-card',
+  styleUrls: ['./meetup-details-card.component.scss'],
   templateUrl: './meetup-details-card.component.html',
-  styleUrls: ['./meetup-details-card.component.scss']
 })
 export class MeetupDetailsCardComponent implements OnInit {
 
-  meetups = MeetupsDB;
+  meetups: Meetup[] = MeetupsDB;
 
   constructor() { }
 
