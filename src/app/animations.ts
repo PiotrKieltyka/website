@@ -61,15 +61,15 @@ const moveDown = [
   query(
     ':enter, :leave',
     style({
+      backfaceVisibility: 'hidden',
+      left: 0,
+      overflow: 'hidden',
       position: 'fixed',
       top: 0,
-      left: 0,
-      width: '100%',
-      overflow: 'hidden',
-      backfaceVisibility: 'hidden',
       transformStyle: 'preserve-3d',
+      width: '100%',
     }),
-    { optional: true }
+    { optional: true },
   ),
   group([
     query(
@@ -80,15 +80,15 @@ const moveDown = [
           '1s 0s ease',
           keyframes([
             style({
-              transform: 'translateY(-100%)',
               offset: 0,
+              transform: 'translateY(-100%)',
               'z-index': '9999',
             }),
             style({ transform: 'translateY(0%)', offset: 1 }),
           ])
         ),
       ],
-      { optional: true }
+      { optional: true },
     ),
     query(
       ':leave',
@@ -101,7 +101,7 @@ const moveDown = [
           ])
         ),
       ],
-      { optional: true }
+      { optional: true },
     ),
   ]),
 ];
@@ -110,9 +110,9 @@ const moveRight = [
   style({ position: 'relative' }),
   query(':enter, :leave', [
     style({
+      left: 0,
       position: 'absolute',
       top: 0,
-      left: 0,
       width: '100%',
     }),
   ]),

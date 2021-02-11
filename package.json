@@ -14,7 +14,8 @@
     "prod": "ng build --prod new-site",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "format": "prettier --write ."
   },
   "private": true,
   "dependencies": {

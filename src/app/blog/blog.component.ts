@@ -32,15 +32,15 @@ export const MY_FORMATS = {
 
 @Component({
   selector: 'site-blog',
-  templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss'],
+  templateUrl: './blog.component.html',
 })
 export class BlogComponent {
   private post: BlogPost = {
-    title: '',
+    content: '',
     date: moment().format(),
     link: '',
-    content: '',
+    title: '',
   };
   blogposts: BlogPost[] = [];
 
@@ -54,9 +54,9 @@ export class BlogComponent {
 
   openAddPostDialog(): void {
     const dialogRef = this.postDialog.open(AddPostDialog, {
-      width: '500px',
       autoFocus: true,
       data: { ...this.post },
+      width: '500px',
     });
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
@@ -70,17 +70,17 @@ export class BlogComponent {
     this.dbService
       .getAllPosts()
       .subscribe(
-        (result: { posts: BlogPost[] }) => (this.blogposts = result.posts)
-      );
+        (result: { posts: BlogPost[] }) => (this.blogposts = result.posts),
+      );  
   }
 }
 
 @Component({
   providers: [
     {
+      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS],
       provide: DateAdapter,
       useClass: MomentDateAdapter,
-      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS],
     },
     {
       provide: MAT_DATE_FORMATS,
@@ -88,8 +88,8 @@ export class BlogComponent {
     },
   ],
   selector: 'site-addPostDialog',
-  templateUrl: './add-post.dialog.html',
   styleUrls: ['./add-post.dialog.scss'],
+  templateUrl: './add-post.dialog.html',
 })
 export class AddPostDialog {
   constructor(

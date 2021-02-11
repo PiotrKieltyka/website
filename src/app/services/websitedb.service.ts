@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BlogPost } from '../../models/blogpost.model';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
@@ -17,11 +17,11 @@ export class WebsiteDBService {
       .post(
         'https://node.piotrkieltyka.website/api/posts/',
         JSON.stringify(post),
-        this.addHeaders()
+        this.addHeaders(),
       )
       .subscribe(
         (data) => data,
-        (err) => console.error(err)
+        (err) => console.error(err),
       );
   }
 

@@ -1,11 +1,11 @@
-import { Component, Inject, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { Component, Inject, OnInit } from '@angular/core';
+import firebase from 'firebase/app';
 import {
   MatDialog,
   MatDialogRef,
   MAT_DIALOG_DATA,
 } from '@angular/material/dialog';
-import firebase from 'firebase/app';
 
 @Component({
   selector: 'site-userinfo',
@@ -43,7 +43,7 @@ export class UserinfoComponent implements OnInit {
 export class ProfileDialog {
   constructor(
     public dialogRef: MatDialogRef<ProfileDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: firebase.User
+    @Inject(MAT_DIALOG_DATA) public data: firebase.User,
   ) {}
 
   onNoClick(): void {
