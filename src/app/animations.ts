@@ -85,7 +85,7 @@ const moveDown = [
               'z-index': '9999',
             }),
             style({ transform: 'translateY(0%)', offset: 1 }),
-          ])
+          ]),
         ),
       ],
       { optional: true },

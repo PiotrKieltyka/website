@@ -13,7 +13,7 @@ export class AuthService {
 
   constructor(
     private angularFireAuth: AngularFireAuth,
-    private router: Router
+    private router: Router,
   ) {
     this.angularFireAuth.authState.subscribe((user) => {
       if (user) {

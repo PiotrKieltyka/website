@@ -3,17 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { slideInAnimation } from './animations';
 
 @Component({
+  animations: [slideInAnimation],
   selector: 'app-root',
   styles: [],
   templateUrl: './app.component.html',
-  animations: [slideInAnimation],
 })
 export class AppComponent {
-  prepareRoute(outlet: RouterOutlet) {
-    return (
-      outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation
-    );
-  }
 
   constructor() {
     console.log(
@@ -22,4 +17,11 @@ export class AppComponent {
       'Hello stranger! Are you lost?',
     );
   }
+
+  prepareRoute(outlet: RouterOutlet) {
+    return (
+      outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation
+    );
+  }
+
 }

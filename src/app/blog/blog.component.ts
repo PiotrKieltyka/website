@@ -36,18 +36,19 @@ export const MY_FORMATS = {
   templateUrl: './blog.component.html',
 })
 export class BlogComponent {
+  
+  blogposts: BlogPost[] = [];
   private post: BlogPost = {
     content: '',
     date: moment().format(),
     link: '',
     title: '',
   };
-  blogposts: BlogPost[] = [];
 
   constructor(
     public postDialog: MatDialog,
     public authService: AuthService,
-    public dbService: WebsiteDBService
+    public dbService: WebsiteDBService,
   ) {
     this.getAllPosts();
   }
@@ -94,7 +95,7 @@ export class BlogComponent {
 export class AddPostDialog {
   constructor(
     public dialogRef: MatDialogRef<AddPostDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: BlogPost
+    @Inject(MAT_DIALOG_DATA) public data: BlogPost,
   ) {}
 
   onNoClick(): void {
