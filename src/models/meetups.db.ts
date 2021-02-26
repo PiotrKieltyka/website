@@ -4,7 +4,7 @@ export const MeetupsDB: Meetup[] = [
   {
     title: 'Angular Tricity #8',
     date: 'June 25, 2019',
-    featured_image: '../assets/angular_tricity.png',
+    featured_image: '../assets/angular_tricity.webp',
     topics: [
       'Spectator: Make Angular tests great again/finally',
       'Od kodu spaghetti do kontenerów IoC',
@@ -15,7 +15,7 @@ export const MeetupsDB: Meetup[] = [
   {
     title: 'Angular Tricity #7',
     date: 'April 8, 2019',
-    featured_image: '../assets/angular_tricity.png',
+    featured_image: '../assets/angular_tricity.webp',
     topics: [
       'Enterprise Angular apps with Nx and monorepo approach',
       'RxJS Tips & Tricks',
@@ -25,7 +25,7 @@ export const MeetupsDB: Meetup[] = [
   {
     title: 'Angular Tricity #6',
     date: 'February 19, 2019',
-    featured_image: '../assets/angular_tricity.png',
+    featured_image: '../assets/angular_tricity.webp',
     topics: [
       'Dynamic components & Lazy loading with Angular',
       'Introduction to Apollo GraphQL with Angular',
@@ -36,7 +36,7 @@ export const MeetupsDB: Meetup[] = [
   {
     title: 'Angular Tricity #5',
     date: 'November 6, 2018',
-    featured_image: '../assets/angular_tricity.png',
+    featured_image: '../assets/angular_tricity.webp',
     topics: [
       'State management with NgRx',
       'I like to move it! Animations in Angular',
@@ -47,7 +47,7 @@ export const MeetupsDB: Meetup[] = [
   {
     title: 'Angular Tricity #4',
     date: 'September 12, 2018',
-    featured_image: '../assets/angular_tricity.png',
+    featured_image: '../assets/angular_tricity.webp',
     topics: [
       'Angular i18n - current state and the future',
       'Domain Driven Design w Angular',
@@ -58,7 +58,7 @@ export const MeetupsDB: Meetup[] = [
   {
     title: 'Angular Tricity #3',
     date: 'June 27, 2018',
-    featured_image: '../assets/angular_tricity.png',
+    featured_image: '../assets/angular_tricity.webp',
     topics: [
       'Angular Schematics',
       'Angular, the bad parts',
@@ -76,7 +76,7 @@ export const MeetupsDB: Meetup[] = [
   {
     title: 'Angular Tricity #2',
     date: 'May 9, 2018',
-    featured_image: '../assets/angular_tricity.png',
+    featured_image: '../assets/angular_tricity.webp',
     topics: [
       'TypeScript magic types, the advanced type system',
       'Whats new in Angular 6',
@@ -87,7 +87,7 @@ export const MeetupsDB: Meetup[] = [
   {
     title: 'Angular Tricity #1',
     date: 'March 22, 2018',
-    featured_image: '../assets/angular_tricity.png',
+    featured_image: '../assets/angular_tricity.webp',
     topics: ['Component testing', 'Directives', 'Streams'],
     link: 'https://pl-pl.facebook.com/AngularTricity/',
   },
