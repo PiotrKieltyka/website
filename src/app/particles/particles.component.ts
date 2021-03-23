@@ -88,7 +88,7 @@ export class ParticlesComponent implements AfterViewInit, OnDestroy {
   }
 
   draw(p: SingleParticle) {
-    this.context.fillStyle = 'rgba(119,119,119, .2)'; // particle dot color
+    this.context.fillStyle = 'rgba(119,119,119, .6)'; // particle dot color
     this.context.beginPath();
     this.context.arc(p.x, p.y, this.size, 0, Math.PI * 2, false);
     this.context.closePath();
@@ -173,7 +173,7 @@ export class ParticlesComponent implements AfterViewInit, OnDestroy {
     const dist = Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2));
     if (dist <= this.linkDistance) {
       if (0.7 - dist / (1 / 0.7) / this.linkDistance > 0) {
-        this.context.strokeStyle = 'rgba(119, 119,119, .05)'; // particle link color
+        this.context.strokeStyle = 'rgba(119, 119,119, .15)'; // particle link color
         this.context.lineWidth = this.linkWidth;
         this.context.beginPath();
         this.context.moveTo(p1.x, p1.y);

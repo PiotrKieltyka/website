@@ -9,13 +9,14 @@ export class WebsiteDBService {
   constructor(private http: HttpClient) {}
 
   getAllPosts() {
-    return this.http.get('https://node.piotrkieltyka.website/api/posts/');
+    return this.http.get('https://piotrkieltyka-website-node.herokuapp.com/api/posts/');
+    // return this.http.get('https://node.piotrkieltyka.website/api/posts/');
   }
 
   addPost(post: BlogPost) {
     return this.http
       .post(
-        'https://node.piotrkieltyka.website/api/posts/',
+        'https://piotrkieltyka-website-node.herokuapp.com/api/posts/',
         JSON.stringify(post),
         this.addHeaders(),
       )
