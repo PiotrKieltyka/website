@@ -9,13 +9,13 @@ export class WebsiteDBService {
   constructor(private http: HttpClient) {}
 
   getAllPosts() {
-    return this.http.get('http://node.piotrkieltyka.website:33033/api/posts/');
+    return this.http.get('https://node.piotrkieltyka.website:33033/api/posts/');
   }
 
   addPost(post: BlogPost) {
     return this.http
       .post(
-        'http://node.piotrkieltyka.website:33033/api/posts/',
+        'https://node.piotrkieltyka.website:33033/api/posts/',
         JSON.stringify(post),
         this.addHeaders(),
       )
