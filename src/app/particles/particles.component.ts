@@ -161,9 +161,9 @@ export class ParticlesComponent implements AfterViewInit, OnDestroy {
             (-1 * Math.pow(distMouse / this.repulseDistance, 2) + 1) *
             this.repulseDistance *
             velocity,
-          0,
+          0
         ),
-        50,
+        50
       );
     p.x = p.x - (dxMouse / distMouse) * repulseFactor;
     p.y = p.y - (dyMouse / distMouse) * repulseFactor;

@@ -9,12 +9,11 @@ import { slideInAnimation } from './animations';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-
   constructor() {
     console.log(
       '%c%s',
       'color: #939393; background: transparent; font-size: 24pt; background-clip: text; text-shadow: 0px 1px 3px rgba(243,243,243,.5);',
-      'Hello stranger! Are you lost?',
+      'Hello stranger! Are you lost?'
     );
   }
 
@@ -23,5 +22,4 @@ export class AppComponent {
       outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation
     );
   }
-
 }

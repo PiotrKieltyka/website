@@ -43,7 +43,7 @@ export class UserinfoComponent implements OnInit {
 export class ProfileDialog {
   constructor(
     public dialogRef: MatDialogRef<ProfileDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: firebase.User,
+    @Inject(MAT_DIALOG_DATA) public data: firebase.User
   ) {}
 
   onNoClick(): void {
