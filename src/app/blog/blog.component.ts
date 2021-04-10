@@ -36,7 +36,6 @@ export const MY_FORMATS = {
   templateUrl: './blog.component.html',
 })
 export class BlogComponent {
-  
   blogposts: BlogPost[] = [];
   private post: BlogPost = {
     content: '',
@@ -72,7 +71,7 @@ export class BlogComponent {
       .getAllPosts()
       .subscribe(
         (result: { posts: BlogPost[] }) => (this.blogposts = result.posts),
-      );  
+      );
   }
 }
 

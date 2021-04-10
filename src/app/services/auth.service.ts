@@ -7,7 +7,7 @@ import firebase from 'firebase/app';
   providedIn: 'root',
 })
 export class AuthService {
-  isLoggedIn: boolean = false;
+  isLoggedIn = false;
   redirectUrl: string;
   public userData: firebase.User;
 
