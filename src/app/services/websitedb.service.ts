@@ -17,11 +17,11 @@ export class WebsiteDBService {
       .post(
         'https://node.piotrkieltyka.website:33033/api/posts/',
         JSON.stringify(post),
-        this.addHeaders()
+        this.addHeaders(),
       )
       .subscribe(
         (data) => data,
-        (err) => console.error(err)
+        (err) => console.error(err),
       );
   }
 

@@ -13,7 +13,7 @@ export class AppComponent {
     console.log(
       '%c%s',
       'color: #939393; background: transparent; font-size: 24pt; background-clip: text; text-shadow: 0px 1px 3px rgba(243,243,243,.5);',
-      'Hello stranger! Are you lost?'
+      'Hello stranger! Are you lost?',
     );
   }
 

@@ -69,7 +69,7 @@ const moveDown = [
       transformStyle: 'preserve-3d',
       width: '100%',
     }),
-    { optional: true }
+    { optional: true },
   ),
   group([
     query(
@@ -85,10 +85,10 @@ const moveDown = [
               'z-index': '9999',
             }),
             style({ transform: 'translateY(0%)', offset: 1 }),
-          ])
+          ]),
         ),
       ],
-      { optional: true }
+      { optional: true },
     ),
     query(
       ':leave',
@@ -98,10 +98,10 @@ const moveDown = [
           keyframes([
             style({ transform: 'translateY(0%)', offset: 0 }),
             style({ transform: 'translateY(100%)', opacity: '0', offset: 1 }),
-          ])
+          ]),
         ),
       ],
-      { optional: true }
+      { optional: true },
     ),
   ]),
 ];

@@ -47,7 +47,7 @@ export class BlogComponent {
   constructor(
     public postDialog: MatDialog,
     public authService: AuthService,
-    public dbService: WebsiteDBService
+    public dbService: WebsiteDBService,
   ) {
     this.getAllPosts();
   }
@@ -70,7 +70,7 @@ export class BlogComponent {
     this.dbService
       .getAllPosts()
       .subscribe(
-        (result: { posts: BlogPost[] }) => (this.blogposts = result.posts)
+        (result: { posts: BlogPost[] }) => (this.blogposts = result.posts),
       );
   }
 }
@@ -94,7 +94,7 @@ export class BlogComponent {
 export class AddPostDialog {
   constructor(
     public dialogRef: MatDialogRef<AddPostDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: BlogPost
+    @Inject(MAT_DIALOG_DATA) public data: BlogPost,
   ) {}
 
   onNoClick(): void {
