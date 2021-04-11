@@ -10,6 +10,6 @@ jobs:
       - name: Install node
         uses: actions/setup-node@v1
       - name: Prettier code
-        uses: npm run format
+        run: npm run format
       - name: Run tests
-        uses: npm run test
+        run: npm run test
