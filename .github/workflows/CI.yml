@@ -11,7 +11,7 @@ jobs:
         uses: actions/setup-node@v1
       - name: Prettier code
         run: npm run format
-      - name: Install Angular CLI
-        run: npm i --silent @angular/cli
+      - name: Install dependencies
+        run: npm i --silent
       - name: Run tests
         run: npm run test
