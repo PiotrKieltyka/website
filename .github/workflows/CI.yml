@@ -1,12 +1,12 @@
 name: Format and test
-on: [push, pull_request]
+on: [pull_request]
 jobs:
   test:
     name: Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
       - name: Install node
         uses: actions/setup-node@v1
       - name: Prettier code
