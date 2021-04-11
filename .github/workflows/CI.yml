@@ -1,0 +1,13 @@
+name:
+on: [push, pull_request]
+jobs:
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Prettier
+        uses: npm run format
+      - name: Run tests
+        uses: npm run test

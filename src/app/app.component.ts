@@ -9,7 +9,6 @@ import { slideInAnimation } from './animations';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-
   constructor() {
     console.log(
       '%c%s',
@@ -23,5 +22,4 @@ export class AppComponent {
       outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation
     );
   }
-
 }
