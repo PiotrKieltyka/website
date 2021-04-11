@@ -1,4 +1,4 @@
-name:
+name: Format and test
 on: [push, pull_request]
 jobs:
   test:
@@ -7,7 +7,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Prettier
+      - name: Install node
+        uses: actions/setup-node@v1
+      - name: Prettier code
         uses: npm run format
       - name: Run tests
         uses: npm run test
