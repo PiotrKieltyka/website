@@ -1,17 +1,17 @@
 {
   "author": {
     "name": "Piotr Kieltyka",
-    "email": "p.kieltyka@gmail.com",
+    "email": "p.kieltyka+website@gmail.com",
     "url": "https://piotrkieltyka.website"
   },
-  "name": "new-site",
-  "version": "0.3.2",
+  "name": "website",
+  "version": "0.3.3",
   "scripts": {
     "ng": "ng",
     "host": "node -p \"require('ip').address()\"",
     "start": "ng serve --port=4210 --host=$(npm run host --silent) --open --hmr",
     "build": "ng build",
-    "prod": "ng build --configuration production new-site",
+    "build:prod": "NODE_ENV=production ng build --configuration production",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
