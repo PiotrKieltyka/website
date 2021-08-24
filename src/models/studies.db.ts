@@ -2,8 +2,18 @@ import { Study } from './study.model';
 
 export const StudiesDB: Study[] = [
   {
+    title: 'Angular Pro',
+    author: 'Todd Motto / Google Developer Expert',
+    button_icon: 'fab fa-angular',
+  },
+  {
+    title: 'RxJS Masterclass',
+    author: 'Todd Motto / Google Developer Expert',
+    button_icon: 'fab fa-js-square',
+  },
+  {
     title: 'Data Structures + Algorithms',
-    author: 'Andrei Neagoie',
+    author: 'Andrei Neagoie / ZTM Academy',
     button_icon: 'fas fa-brain',
   },
   {
