@@ -1,6 +1,6 @@
 import { AuthService } from '../services/auth.service';
 import { Component, Inject, OnInit } from '@angular/core';
-import firebase from 'firebase/app';
+import firebase from 'firebase/compat/app';
 import {
   MatDialog,
   MatDialogRef,

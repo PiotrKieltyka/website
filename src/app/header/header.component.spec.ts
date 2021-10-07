@@ -3,8 +3,8 @@ import { HeaderComponent } from './header.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HomeComponent } from '../home/home.component';
 import { AuthService } from '../services/auth.service';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../../environments/environment';
 
 describe('HeaderComponent', () => {
