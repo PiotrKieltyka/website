@@ -60,7 +60,7 @@ export class BlogComponent {
         errorMessage.innerHTML = 'Something went wrong.'
         document.querySelector('.container').appendChild(errorMessage);
       }
-    )
+    );
   }
 
   openAddPostDialog(): void {
