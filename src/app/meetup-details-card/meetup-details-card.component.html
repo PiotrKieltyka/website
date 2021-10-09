@@ -1,4 +1,4 @@
-<div class="cards wow slideInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+<div class="cards" data-aos="slide-up" data-aos-duration="1000" data-aos-delay="500">
   <div *ngFor="let meetup of meetups">
     <div class="card-background">
       <div class="card">
@@ -8,7 +8,7 @@
         <h4>{{ meetup.title }}</h4>
         <h6>{{ meetup.date }}</h6>
         <hr />
-        <p class="wow fadeIn delay-1s" *ngFor="let topic of meetup.topics">{{ topic }}</p>
+        <p data-aos="fade" data-aos-duration="1000" data-aos-delay="500" *ngFor="let topic of meetup.topics">{{ topic }}</p>
         <a href="{{ meetup.link }}" class="overlay" target="_blank">Learn more</a>
       </div>
     </div>

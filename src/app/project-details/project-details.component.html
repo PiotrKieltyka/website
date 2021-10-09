@@ -2,13 +2,13 @@
 
   <!-- Left content -->
   <div *ngIf="project.position == 'left'">
-    <div class="wow fadeIn">
+    <div data-aos="fade" data-aos-duration="1000">
       <div class="content-wrap">
         <div class="row">
-          <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="col-xs-12 col-md-6" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
             <img class="img-responsive box-shadowed" src="{{ project.featured_image }}" title="{{ project.title }}" alt="{{ project.title }}">
           </div>
-          <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="col-xs-12 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <div class="content">
               <h3 class="title shadowed">{{ project.title }}</h3>
               <p class="excerpt shadowed">{{ project.lead_text }}</p>
@@ -29,10 +29,10 @@
 
   <!-- Right content -->
   <div *ngIf="project.position == 'right'">
-    <div class="wow fadeIn">
+    <div data-aos="fade" data-aos-duration="1000">
       <div class="content-wrap">
         <div class="row">
-          <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="col-xs-12 col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
             <div class="content">
               <h3 class="title shadowed">{{ project.title }}</h3>
               <p class="excerpt shadowed">{{ project.lead_text }}</p>
@@ -45,7 +45,7 @@
               <!-- <div class="categories"><span>{{ project.categories }}</span></div> -->
             </div>
           </div>
-          <div class="col-xs-12 col-md-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="col-xs-12 col-md-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
             <img class="img-responsive box-shadowed" src="{{ project.featured_image }}" title="{{ project.title }}" alt="{{ project.title }}">
           </div>
         </div>

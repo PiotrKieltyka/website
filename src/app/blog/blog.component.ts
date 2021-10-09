@@ -49,7 +49,18 @@ export class BlogComponent {
     public authService: AuthService,
     public dbService: WebsiteDBService,
   ) {
-    this.getAllPosts();
+    dbService.getAllPosts().subscribe(
+      (result: { posts: BlogPost[] }) => (this.blogposts = result.posts),
+      () => {
+        const errorMessage = document.createElement('p');
+        errorMessage.style.fontSize = '1.7rem';
+        errorMessage.style.marginTop = '3rem';
+        errorMessage.classList.add('animate__animated', 'animate__fadeIn');
+        errorMessage.style.setProperty('--animate__delay', '.5s');
+        errorMessage.innerHTML = 'Something went wrong.'
+        document.querySelector('.container').appendChild(errorMessage);
+      }
+    )
   }
 
   openAddPostDialog(): void {
