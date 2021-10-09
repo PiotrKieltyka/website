@@ -1,9 +1,9 @@
 <div class="container">
-  <div id="blog-logo" class="wow fadeIn"></div>
+  <div id="blog-logo" class="animate__animated animate__fadeIn"></div>
   <!-- Blog Logo by https://dribbble.com/tranmautritam - Email: hello@tranmautritam.com -->
   <button *ngIf="authService.isLoggedIn" mat-stroked-button class="mat-stroked-button mat-button-base" (click)="openAddPostDialog()">add post</button>
   <div class="row" *ngFor="let blogpost of blogposts">
-    <div class="col-md-10 col-md-offset-1 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="col-md-10 col-md-offset-1 animate__animated animate__fadeInUp" style="--animate-duration: 1s; --animate-delay: .5s">
       <div class="col-md-4 blog-column-1">
         <h3>{{ blogpost.title }}</h3>
         <h6>{{ blogpost.date }}</h6>

@@ -2,12 +2,12 @@
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <h1 class="text-center shadowed wow zoomInUp" data-wow-duration="1.5s" data-wow-delay=".5s">
+        <h1 class="text-center shadowed animate__animated animate__zoomInUp" style="--animate-duration: 1.5s; --animate-delay: .5s">
           Whoami
         </h1>
         <hr />
         <!-- <p class="text-center"><img src="/assets/avataaars.png" alt="avatar image" width="85px"></p> -->
-        <p class="wow fadeIn">
+        <p class="animate__animated animate__fadeIn">
           Information Technology Engineer with many years of experience in
           maintenance and deployment of hardware and software as well as
           software development. Dedicated developer with a passion for
@@ -19,11 +19,11 @@
         </p>
         <hr />
         <!-- Skills -->
-        <h3 class="text-center shadowed">Technical skills</h3>
-        <div id="technical-skills" class="wow fadeIn delay-1s">
+        <h3 class="text-center shadowed" data-aos="fade" data-aos-duration="1000" data-aos-delay="500">Technical skills</h3>
+        <div id="technical-skills" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
           <!-- Background by https://dribbble.com/tranmautritam - Email: hello@tranmautritam.com -->
         </div>
-        <div class="wow fadeInUp" data-wow-duration="1s">
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
           <h4 id="programming">Programming</h4>
           <ul>
             <li>TypeScript/JavaScript</li>
@@ -38,7 +38,7 @@
             <li>GraphQL</li>
           </ul>
         </div>
-        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
           <h4 id="version-control-systems">Version Control Systems</h4>
           <ul>
             <li>Git</li>
@@ -46,7 +46,7 @@
             <li>BitBucket</li>
           </ul>
         </div>
-        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
           <h4 id="databases">Databases</h4>
           <ul>
             <li>MongoDB</li>
@@ -54,7 +54,7 @@
             <li>MySQL</li>
           </ul>
         </div>
-        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
           <h4 id="systems">Systems</h4>
           <ul>
             <li>Linux</li>
@@ -62,7 +62,7 @@
             <li>Mac OS</li>
           </ul>
         </div>
-        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
           <h4 id="services">Services</h4>
           <ul>
             <li>WWW servers</li>
@@ -75,22 +75,20 @@
             <li>sharing network resources (samba, nfs, scp, ftp)</li>
           </ul>
         </div>
-        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-          <hr />
-        </div>
+        <hr />
         <!-- Personal studies -->
-        <h3 class="text-center shadowed conferences-meetups wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+        <h3 class="text-center shadowed conferences-meetups" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
           Personal studies
         </h3>
-        <div id="presentation" class="wow fadeIn delay-1s">
+        <div id="presentation" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
           <!-- Background by https://dribbble.com/tranmautritam - Email: hello@tranmautritam.com -->
         </div>
         <site-personal-studies></site-personal-studies>
-        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+        <div data-aos="fade" data-aos-duration="1000" data-aos-delay="500">
           <hr />
         </div>
         <!-- Conferences Meetups -->
-        <h3 class="text-center shadowed conferences-meetups wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+        <h3 class="text-center shadowed conferences-meetups" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500">
           Conferences &amp; Meetups
         </h3>
         <site-meetup-details-card></site-meetup-details-card>
