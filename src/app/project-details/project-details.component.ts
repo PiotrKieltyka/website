@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Project } from '../../models/project.model';
-import { ProjectsDB } from './../../models/projects.db';
+import { ProjectsDB } from '../../models/projects.db';
 
 @Component({
   selector: 'site-project-details',
