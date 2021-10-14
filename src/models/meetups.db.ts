@@ -2,6 +2,17 @@ import { Meetup } from './meetup.model';
 
 export const MeetupsDB: Meetup[] = [
   {
+    title: 'DEV JS Summit',
+    date: '14 October 2021',
+    featured_image: '../assets/devjssummit.webp',
+    topics: [
+      'Angular Performance',
+      'Modern layouts with CSS Grid',
+      'NodeJS, where does it come from',
+    ],
+    link: 'https://devjssummit.pl/',
+  },
+  {
     title: 'Angular Tricity #8',
     date: 'June 25, 2019',
     featured_image: '../assets/angular_tricity.webp',

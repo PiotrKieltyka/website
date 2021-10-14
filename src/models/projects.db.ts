@@ -16,11 +16,11 @@ export const ProjectsDB: Project[] = [
   {
     position: 'right',
     title: 'Internetics.Group',
-    lead_text: 'Landing Page',
+    lead_text: 'Internetics.Group landing page',
     date: '2021-08-01',
     tags: ['Angular', 'TypeScript', 'TailwindCSS', 'RWD'],
     featured_image: '../assets/08-internetics-page.webp',
-    project_link: 'http://internetics.piotrkieltyka.website',
+    project_link: 'https://internetics.piotrkieltyka.website',
     button_icon: 'fab fa-angular fa-lg',
     button_text: 'Visit project',
     categories: 'development',
