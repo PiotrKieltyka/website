@@ -21,7 +21,7 @@ export class WebsiteDBService {
       )
       .subscribe(
         (data) => data,
-        (err) => console.error(err),
+        (err) => err,
       );
   }
 
