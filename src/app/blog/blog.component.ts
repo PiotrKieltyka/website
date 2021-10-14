@@ -57,10 +57,10 @@ export class BlogComponent {
         errorMessage.style.marginTop = '3rem';
         errorMessage.classList.add('animate__animated', 'animate__fadeIn');
         errorMessage.style.setProperty('--animate__delay', '.5s');
-        errorMessage.innerHTML = 'Something went wrong.'
+        errorMessage.innerHTML = 'Something went wrong.';
         document.querySelector('.container').appendChild(errorMessage);
-      }
-    )
+      },
+    );
   }
 
   openAddPostDialog(): void {
