@@ -82,9 +82,11 @@ button {
     text-decoration: none;
     color: #7a7a7a;
     font-size: 1.3rem;
+    &:hover {
+      color: #333333;
+    }
   }
 }
-
 @keyframes bar-animation {
   0%,
   100% {
