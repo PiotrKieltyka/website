@@ -10,6 +10,7 @@
       </div>
       <div class="col-md-8 blog-column-2">
         <span [innerHTML]="blogpost.content"></span>
+        <p><button *ngIf="authService.isLoggedIn" mat-stroked-button class="mat-stroked-button mat-button-base" (click)="openEditPostDialog(blogpost._id)">edit</button></p>
         <hr id="blog-line"/>
         <a *ngIf="blogpost.link" href="{{ blogpost.link }}">Learn more</a>
       </div>
