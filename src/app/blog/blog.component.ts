@@ -78,24 +78,21 @@ export class BlogComponent {
   }
 
   openEditPostDialog(id: string) {
-    this.dbService.getPostById(id).subscribe(
-      (result: BlogPost) => {
-        result.date = moment(result.date).format();
-        const dialogRef = this.postDialog.open(EditPostDialog, {
-          autoFocus: true,
-          data: { ...result },
-          width: '500px',
-        });
-        dialogRef.afterClosed().subscribe((result) => {
-          if (result) {
-            result.date = moment(result.date).format('MMMM D, YYYY');
-            this.dbService.updatePostById(id, result);
-          }
-        });
-      }
-    );
+    this.dbService.getPostById(id).subscribe((result: BlogPost) => {
+      result.date = moment(result.date).format();
+      const dialogRef = this.postDialog.open(EditPostDialog, {
+        autoFocus: true,
+        data: { ...result },
+        width: '500px',
+      });
+      dialogRef.afterClosed().subscribe((result) => {
+        if (result) {
+          result.date = moment(result.date).format('MMMM D, YYYY');
+          this.dbService.updatePostById(id, result);
+        }
+      });
+    });
   }
-
 }
 
 @Component({

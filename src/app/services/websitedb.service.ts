@@ -14,7 +14,9 @@ export class WebsiteDBService {
   }
 
   getPostById(id: string) {
-    return this.http.get('https://node.piotrkieltyka.website:33033/api/post/' + id);
+    return this.http.get(
+      'https://node.piotrkieltyka.website:33033/api/post/' + id,
+    );
   }
 
   addPost(post: BlogPost) {
