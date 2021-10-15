@@ -28,7 +28,7 @@ import {
 import { LoaderComponent } from './loader/loader.component';
 import { LoaderService } from './services/loader.service';
 import { LoaderInterceptor } from './interceptors/loader.interceptor';
-import { AddPostDialog, BlogComponent } from './blog/blog.component';
+import { AddPostDialog, BlogComponent, EditPostDialog } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +48,7 @@ import { AddPostDialog, BlogComponent } from './blog/blog.component';
     LoaderComponent,
     BlogComponent,
     AddPostDialog,
+    EditPostDialog,
   ],
   entryComponents: [ProfileDialog, AddPostDialog],
   imports: [

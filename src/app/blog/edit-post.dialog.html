@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Add Blog Post</h2>
+<div mat-dialog-content class="add-post-data">
+  <mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="data.title" cdkFocusInitial required>
+    <mat-error>This field is required</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Date</mat-label>
+    <input matInput [matDatepicker]="dp" disabled [(ngModel)]="data.date">
+    <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+    <mat-datepicker #dp disabled="false"></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Link</mat-label>
+    <input matInput [(ngModel)]="data.link">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Content</mat-label>
+    <input matInput [(ngModel)]="data.content" required>
+    <mat-error>This field is required</mat-error>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions class="add-post-buttons">
+  <button (click)="onNoClick()">dismiss</button>
+  <button [mat-dialog-close]="data">save</button>
+</div>

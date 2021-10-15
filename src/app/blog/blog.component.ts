@@ -77,13 +77,25 @@ export class BlogComponent {
     });
   }
 
-  getAllPosts() {
-    this.dbService
-      .getAllPosts()
-      .subscribe(
-        (result: { posts: BlogPost[] }) => (this.blogposts = result.posts),
-      );
+  openEditPostDialog(id: string) {
+    this.dbService.getPostById(id).subscribe(
+      (result: BlogPost) => {
+        result.date = moment(result.date).format();
+        const dialogRef = this.postDialog.open(EditPostDialog, {
+          autoFocus: true,
+          data: { ...result },
+          width: '500px',
+        });
+        dialogRef.afterClosed().subscribe((result) => {
+          if (result) {
+            result.date = moment(result.date).format('MMMM D, YYYY');
+            this.dbService.updatePostById(id, result);
+          }
+        });
+      }
+    );
   }
+
 }
 
 @Component({
@@ -105,6 +117,33 @@ export class BlogComponent {
 export class AddPostDialog {
   constructor(
     public dialogRef: MatDialogRef<AddPostDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: BlogPost,
+  ) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+}
+
+@Component({
+  providers: [
+    {
+      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS],
+      provide: DateAdapter,
+      useClass: MomentDateAdapter,
+    },
+    {
+      provide: MAT_DATE_FORMATS,
+      useValue: MY_FORMATS,
+    },
+  ],
+  selector: 'site-editPostDialog',
+  styleUrls: ['./edit-post.dialog.scss'],
+  templateUrl: './edit-post.dialog.html',
+})
+export class EditPostDialog {
+  constructor(
+    public dialogRef: MatDialogRef<EditPostDialog>,
     @Inject(MAT_DIALOG_DATA) public data: BlogPost,
   ) {}
 
