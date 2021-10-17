@@ -8,7 +8,7 @@ import { MaterialModule } from './modules/material.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { AppComponent, LimitModal } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
@@ -22,17 +22,13 @@ import { LoginComponent } from './login/login.component';
 import { environment } from 'src/environments/environment';
 import { AuthService } from './services/auth.service';
 import {
-  UserinfoComponent,
   ProfileDialog,
+  UserinfoComponent,
 } from './userinfo/userinfo.component';
 import { LoaderComponent } from './loader/loader.component';
 import { LoaderService } from './services/loader.service';
 import { LoaderInterceptor } from './interceptors/loader.interceptor';
-import {
-  AddPostDialog,
-  BlogComponent,
-  EditPostDialog,
-} from './blog/blog.component';
+import { BlogComponent, PostDialogModal } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -51,10 +47,10 @@ import {
     ProfileDialog,
     LoaderComponent,
     BlogComponent,
-    AddPostDialog,
-    EditPostDialog,
+    PostDialogModal,
+    LimitModal,
   ],
-  entryComponents: [ProfileDialog, AddPostDialog],
+  entryComponents: [ProfileDialog, PostDialogModal],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

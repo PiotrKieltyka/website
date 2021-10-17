@@ -64,7 +64,7 @@ export class BlogComponent {
   }
 
   openAddPostDialog(): void {
-    const dialogRef = this.postDialog.open(AddPostDialog, {
+    const dialogRef = this.postDialog.open(PostDialogModal, {
       autoFocus: true,
       data: { ...this.post },
       width: '500px',
@@ -80,7 +80,7 @@ export class BlogComponent {
   openEditPostDialog(id: string) {
     this.dbService.getPostById(id).subscribe((result: BlogPost) => {
       result.date = moment(result.date).format();
-      const dialogRef = this.postDialog.open(EditPostDialog, {
+      const dialogRef = this.postDialog.open(PostDialogModal, {
         autoFocus: true,
         data: { ...result },
         width: '500px',
@@ -107,40 +107,13 @@ export class BlogComponent {
       useValue: MY_FORMATS,
     },
   ],
-  selector: 'site-addPostDialog',
-  styleUrls: ['./add-post.dialog.scss'],
-  templateUrl: './add-post.dialog.html',
+  selector: 'site-PostDialogModal',
+  templateUrl: './post-modal.dialog.html',
+  styleUrls: ['./post-modal.dialog.scss'],
 })
-export class AddPostDialog {
+export class PostDialogModal {
   constructor(
-    public dialogRef: MatDialogRef<AddPostDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: BlogPost,
-  ) {}
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-}
-
-@Component({
-  providers: [
-    {
-      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS],
-      provide: DateAdapter,
-      useClass: MomentDateAdapter,
-    },
-    {
-      provide: MAT_DATE_FORMATS,
-      useValue: MY_FORMATS,
-    },
-  ],
-  selector: 'site-editPostDialog',
-  styleUrls: ['./edit-post.dialog.scss'],
-  templateUrl: './edit-post.dialog.html',
-})
-export class EditPostDialog {
-  constructor(
-    public dialogRef: MatDialogRef<EditPostDialog>,
+    public dialogRef: MatDialogRef<PostDialogModal>,
     @Inject(MAT_DIALOG_DATA) public data: BlogPost,
   ) {}
 

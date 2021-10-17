@@ -9,20 +9,17 @@ export class WebsiteDBService {
   constructor(private http: HttpClient) {}
 
   getAllPosts() {
-    return this.http.get('https://node.piotrkieltyka.website:33033/api/posts/');
-    // return of({ posts: posts });
+    return this.http.get('https://node.piotrkieltyka.website/api/posts/');
   }
 
   getPostById(id: string) {
-    return this.http.get(
-      'https://node.piotrkieltyka.website:33033/api/post/' + id,
-    );
+    return this.http.get('https://node.piotrkieltyka.website/api/post/' + id);
   }
 
   addPost(post: BlogPost) {
     return this.http
       .post(
-        'https://node.piotrkieltyka.website:33033/api/post/add',
+        'https://node.piotrkieltyka.website/api/post/add',
         JSON.stringify(post),
         this.addHeaders(),
       )
@@ -35,7 +32,7 @@ export class WebsiteDBService {
   updatePostById(id: string, post: BlogPost) {
     return this.http
       .post(
-        'https://node.piotrkieltyka.website:33033/api/post/update/' + id,
+        'https://node.piotrkieltyka.website/api/post/update/' + id,
         JSON.stringify(post),
         this.addHeaders(),
       )
@@ -46,7 +43,10 @@ export class WebsiteDBService {
   }
 
   addHeaders() {
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: sessionStorage.getItem('user'),
+    });
     return {
       headers,
     };
