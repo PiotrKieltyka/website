@@ -21,7 +21,10 @@ import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { LoginComponent } from './login/login.component';
 import { environment } from 'src/environments/environment';
 import { AuthService } from './services/auth.service';
-import { ProfileDialog, UserinfoComponent } from './userinfo/userinfo.component';
+import {
+  ProfileDialog,
+  UserinfoComponent,
+} from './userinfo/userinfo.component';
 import { LoaderComponent } from './loader/loader.component';
 import { LoaderService } from './services/loader.service';
 import { LoaderInterceptor } from './interceptors/loader.interceptor';

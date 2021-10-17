@@ -115,8 +115,7 @@ export class PostDialogModal {
   constructor(
     public dialogRef: MatDialogRef<PostDialogModal>,
     @Inject(MAT_DIALOG_DATA) public data: BlogPost,
-  ) {
-  }
+  ) {}
 
   onNoClick(): void {
     this.dialogRef.close();

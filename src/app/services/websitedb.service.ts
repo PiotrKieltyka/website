@@ -13,9 +13,7 @@ export class WebsiteDBService {
   }
 
   getPostById(id: string) {
-    return this.http.get(
-      'https://node.piotrkieltyka.website/api/post/' + id,
-    );
+    return this.http.get('https://node.piotrkieltyka.website/api/post/' + id);
   }
 
   addPost(post: BlogPost) {
@@ -47,7 +45,7 @@ export class WebsiteDBService {
   addHeaders() {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': sessionStorage.getItem('user'),
+      Authorization: sessionStorage.getItem('user'),
     });
     return {
       headers,
