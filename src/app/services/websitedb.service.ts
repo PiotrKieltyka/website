@@ -10,7 +10,6 @@ export class WebsiteDBService {
 
   getAllPosts() {
     return this.http.get('https://node.piotrkieltyka.website/api/posts/');
-    // return of({ posts: posts });
   }
 
   getPostById(id: string) {
@@ -46,7 +45,10 @@ export class WebsiteDBService {
   }
 
   addHeaders() {
-    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': sessionStorage.getItem('user'),
+    });
     return {
       headers,
     };
