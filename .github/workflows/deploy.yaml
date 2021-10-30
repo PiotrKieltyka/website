@@ -20,7 +20,7 @@ jobs:
       - name: Installing dependencies
         run: npm i
 
-      - name: Add firebase config config file
+      - name: Add firebase config file
         env:
           FIREBASE_APIKEY: ${{ secrets.APIKEY }}
           FIREBASE_APPID: ${{ secrets.APPID }}
