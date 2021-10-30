@@ -68,7 +68,10 @@ import { API_NODE_TOKEN } from './services/api_token';
     LoaderService,
     { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
     AuthService,
-    { provide: API_NODE_TOKEN, useValue: 'https://node.piotrkieltyka.website/api/' },
+    {
+      provide: API_NODE_TOKEN,
+      useValue: 'https://node.piotrkieltyka.website/api/',
+    },
   ],
   bootstrap: [AppComponent],
 })
