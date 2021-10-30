@@ -50,8 +50,8 @@ export class BlogComponent {
     public dbService: WebsiteDBService,
   ) {
     dbService.getAllPosts().subscribe(
-      (result: { posts: BlogPost[] }) => (this.blogposts = result.posts),
-      () => {
+      (result: { posts: Array<BlogPost> }) => (this.blogposts = result.posts),
+      (err) => {
         const errorMessage = document.createElement('p');
         errorMessage.style.fontSize = '1.7rem';
         errorMessage.style.marginTop = '3rem';
@@ -59,6 +59,7 @@ export class BlogComponent {
         errorMessage.style.setProperty('--animate__delay', '.5s');
         errorMessage.innerHTML = 'Something went wrong.';
         document.querySelector('.container').appendChild(errorMessage);
+        this.dbService.handleError(err);
       },
     );
   }
@@ -72,7 +73,10 @@ export class BlogComponent {
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         result.date = moment(result.date).format('MMMM D, YYYY');
-        this.dbService.addPost(result);
+        this.dbService.addPost(result).subscribe(
+          (data) => data,
+          (err) => this.dbService.handleError(err),
+        );
       }
     });
   }
@@ -88,7 +92,10 @@ export class BlogComponent {
       dialogRef.afterClosed().subscribe((result) => {
         if (result) {
           result.date = moment(result.date).format('MMMM D, YYYY');
-          this.dbService.updatePostById(id, result);
+          this.dbService.updatePostById(id, result).subscribe(
+            (data) => data,
+            (err) => this.dbService.handleError(err),
+          );
         }
       });
     });

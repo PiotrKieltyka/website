@@ -26,6 +26,7 @@ import { LoaderComponent } from './loader/loader.component';
 import { LoaderService } from './services/loader.service';
 import { LoaderInterceptor } from './interceptors/loader.interceptor';
 import { BlogComponent, PostDialogModal } from './blog/blog.component';
+import { API_NODE_TOKEN } from './services/api_token';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { BlogComponent, PostDialogModal } from './blog/blog.component';
     LoaderService,
     { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
     AuthService,
+    { provide: API_NODE_TOKEN, useValue: 'https://node.piotrkieltyka.website/api/' },
   ],
   bootstrap: [AppComponent],
 })
