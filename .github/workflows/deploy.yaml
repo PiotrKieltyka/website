@@ -1,0 +1,45 @@
+name: Website-Deploy
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+
+      - name: Installing dependencies
+        run: npm i
+
+      - name: Add firebase config config file
+        env:
+          FIREBASE_APIKEY: ${{ secrets.APIKEY }}
+          FIREBASE_APPID: ${{ secrets.APPID }}
+          FIREBASE_AUTHDOMAIN: ${{ secrets.AUTHDOMAIN }}
+          FIREBASE_DATABASEURL: ${{ secrets.DATABASEURL }}
+          FIREBASE_MESSAGINGSENDERID: ${{ secrets.MESSAGINGSENDERID }}
+          FIREBASE_PROJECTID: ${{ secrets.PROJECTID }}
+          FIREBASE_STORAGEBUCKET: ${{ secrets.STORAGEBUCKET }}
+        run: |
+          echo 'export const FirebaseConfig = { apiKey: `'$FIREBASE_APIKEY'`, authDomain: `'$FIREBASE_AUTHDOMAIN'`, databaseURL: `'$FIREBASE_DATABASEURL'`, projectId: `'$FIREBASE_DATABASEURL'`, projectId: `'$FIREBASE_PROJECTID'`, storageBucket: `'$FIREBASE_STORAGEBUCKET'`, messagingSenderId: `'$FIREBASE_MESSAGINGSENDERID'`, appId: `'$FIREBASE_APPID'` }' > ./src/environments/firebase.config.ts
+
+      - name: Building project
+        run: npm run build:prod
+
+      - name: Deploy to server
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: ./www/website/
