@@ -30,7 +30,7 @@ jobs:
           FIREBASE_PROJECTID: ${{ secrets.PROJECTID }}
           FIREBASE_STORAGEBUCKET: ${{ secrets.STORAGEBUCKET }}
         run: |
-          echo 'export const FirebaseConfig = { apiKey: `'$FIREBASE_APIKEY'`, authDomain: `'$FIREBASE_AUTHDOMAIN'`, databaseURL: `'$FIREBASE_DATABASEURL'`, projectId: `'$FIREBASE_DATABASEURL'`, projectId: `'$FIREBASE_PROJECTID'`, storageBucket: `'$FIREBASE_STORAGEBUCKET'`, messagingSenderId: `'$FIREBASE_MESSAGINGSENDERID'`, appId: `'$FIREBASE_APPID'` }' > ./src/environments/firebase.config.ts
+          echo 'export const FirebaseConfig = { apiKey: `'$FIREBASE_APIKEY'`, authDomain: `'$FIREBASE_AUTHDOMAIN'`, databaseURL: `'$FIREBASE_DATABASEURL'`, projectId: `'$FIREBASE_DATABASEURL'`, storageBucket: `'$FIREBASE_STORAGEBUCKET'`, messagingSenderId: `'$FIREBASE_MESSAGINGSENDERID'`, appId: `'$FIREBASE_APPID'` }' > ./src/environments/firebase.config.ts
 
       - name: Building project
         run: npm run build:prod
