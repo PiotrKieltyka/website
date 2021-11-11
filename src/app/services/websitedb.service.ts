@@ -18,7 +18,9 @@ export class WebsiteDBService {
   ) {}
 
   getAllPosts(): Observable<Array<BlogPost>> {
-    return this.http.get(this.API_NODE_TOKEN + 'posts/') as Observable<Array<BlogPost>>;
+    return this.http.get(this.API_NODE_TOKEN + 'posts/') as Observable<
+      Array<BlogPost>
+    >;
   }
 
   getPostById(id: string): Observable<BlogPost> {
