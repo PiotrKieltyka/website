@@ -17,10 +17,10 @@ export class WebsiteDBService {
     @Inject(API_NODE_TOKEN) private API_NODE_TOKEN: string,
   ) {}
 
-  getAllPosts(): Observable<{ posts: Array<BlogPost> }> {
-    return this.http.get(this.API_NODE_TOKEN + 'posts/') as Observable<{
-      posts: Array<BlogPost>;
-    }>;
+  getAllPosts(): Observable<Array<BlogPost>> {
+    return this.http.get(this.API_NODE_TOKEN + 'posts/') as Observable<
+      Array<BlogPost>
+    >;
   }
 
   getPostById(id: string): Observable<BlogPost> {
