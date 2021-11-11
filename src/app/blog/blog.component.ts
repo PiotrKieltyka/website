@@ -50,7 +50,7 @@ export class BlogComponent {
     public dbService: WebsiteDBService,
   ) {
     dbService.getAllPosts().subscribe(
-      (result: { posts: Array<BlogPost> }) => (this.blogposts = result.posts),
+      (result: Array<BlogPost>) => (this.blogposts = result),
       (err) => {
         const errorMessage = document.createElement('p');
         errorMessage.style.fontSize = '1.7rem';
